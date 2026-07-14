@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arda Data | Data Analysis Project Hub</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0F172A',
+                        cardBg: '#1E293B',
+                        accentOrange: '#F97316',
+                        accentOrangeLight: '#FDBA74'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-darkBg text-slate-100 font-sans antialiased min-h-screen">
+
+    <!-- Header / Navbar -->
+    <header class="border-b border-slate-800 bg-darkBg/80 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+            
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-2 group">
+                <span class="text-2xl font-black tracking-wider bg-gradient-to-r from-orange-500 to-amber-400 bg-clip-text text-transparent group-hover:opacity-90 transition">
+                    ARDA DATA
+                </span>
+            </a>
+
+            <nav class="flex space-x-6 text-sm font-medium text-slate-300">
+                <a href="#projects" class="hover:text-white transition">Projects</a>
+                <a href="#skills" class="hover:text-white transition">Skills</a>
+                <a href="#about" class="hover:text-white transition">About & Contact</a>
+                <a href="https://www.youtube.com/@ardadata" target="_blank" class="text-orange-500 hover:text-orange-400 transition font-bold">YouTube Channel →</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="max-w-4xl mx-auto px-4 py-20 text-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 leading-tight">
+            Data Analysis Projects <br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-400">Step-by-Step Portfolio</span>
+        </h1>
+        <p class="text-lg text-slate-400 max-w-2xl mx-auto mb-8">
+            I build end-to-end data analysis projects. Watch the "No Talking" video tutorials, practice with real-world datasets, and accelerate your learning journey.
+        </p>
+        <div class="flex justify-center flex-wrap gap-4">
+            <a href="#projects" class="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-slate-950 font-bold px-6 py-3 rounded-lg transition shadow-lg shadow-orange-500/20">Browse Projects</a>
+            <!-- CV İndirme Butonu -->
+            <a href="CV.pdf" download="Arda_Ozturk_CV.pdf" class="border border-orange-500/50 hover:border-orange-500 text-orange-400 hover:text-orange-300 px-6 py-3 rounded-lg transition flex items-center gap-2">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
+                Download CV
+            </a>
+        </div>
+    </section>
+
+    <!-- İstatistik Kartları -->
+    <section class="max-w-5xl mx-auto px-4 mb-16">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-cardBg/40 border border-slate-800/80 rounded-xl p-6 text-center">
+                <div class="text-3xl font-extrabold text-orange-500 mb-1">2+</div>
+                <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">SQL Projects</div>
+            </div>
+            <div class="bg-cardBg/40 border border-slate-800/80 rounded-xl p-6 text-center">
+                <div class="text-3xl font-extrabold text-amber-500 mb-1">110K+</div>
+                <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Rows Analyzed</div>
+            </div>
+            <div class="bg-cardBg/40 border border-slate-800/80 rounded-xl p-6 text-center">
+                <div class="text-3xl font-extrabold text-orange-500 mb-1">YouTube</div>
+                <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Video Tutorials</div>
+            </div>
+            <div class="bg-cardBg/40 border border-slate-800/80 rounded-xl p-6 text-center">
+                <div class="text-3xl font-extrabold text-amber-500 mb-1">100%</div>
+                <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Open Source</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Tools (Tableau Kaldırıldı!) -->
+    <section id="skills" class="max-w-5xl mx-auto px-4 py-12 border-t border-slate-800/50">
+        <h2 class="text-2xl font-bold mb-8 border-l-4 border-orange-500 pl-3">Skills & Tools</h2>
+        <div class="flex flex-wrap gap-3">
+            <span class="bg-slate-800/80 border border-slate-700 text-slate-200 px-4 py-2 rounded-lg text-sm font-semibold hover:border-orange-500/50 transition">SQL (MS SQL)</span>
+            <span class="bg-slate-800/80 border border-slate-700 text-slate-200 px-4 py-2 rounded-lg text-sm font-semibold hover:border-orange-500/50 transition">Python (Pandas, NumPy, Matplotlib, Scikit-Learn)</span>
+            <span class="bg-slate-800/80 border border-slate-700 text-slate-200 px-4 py-2 rounded-lg text-sm font-semibold hover:border-orange-500/50 transition">Data Cleaning & Wrangling</span>
+            <span class="bg-slate-800/80 border border-slate-700 text-slate-200 px-4 py-2 rounded-lg text-sm font-semibold hover:border-orange-500/50 transition">Power BI</span>
+            <span class="bg-slate-800/80 border border-slate-700 text-slate-200 px-4 py-2 rounded-lg text-sm font-semibold hover:border-orange-500/50 transition">Git & GitHub</span>
+            <span class="bg-slate-800/80 border border-slate-700 text-slate-200 px-4 py-2 rounded-lg text-sm font-semibold hover:border-orange-500/50 transition">Excel (Advanced)</span>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <main id="projects" class="max-w-5xl mx-auto px-4 py-12 border-t border-slate-800/50">
+        <h2 class="text-2xl font-bold mb-8 border-l-4 border-orange-500 pl-3">Latest Projects</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+            <!-- Project 1: Online Retail Analysis II -->
+            <article class="bg-cardBg border border-slate-800 rounded-2xl overflow-hidden shadow-xl hover:border-orange-500/30 transition flex flex-col justify-between">
+                <div class="p-6">
+                    <div class="flex items-center justify-between gap-2 mb-4">
+                        <span class="text-xs font-semibold tracking-wider text-orange-400 uppercase">Retail & Sales</span>
+                        <a href="https://www.kaggle.com/datasets/mashlyn/online-retail-ii-uci" target="_blank" class="text-xs text-slate-400 hover:text-white transition">Get Dataset ↗</a>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 line-clamp-2">Building a Real SQL Project From Scratch | Online Retail Analysis II</h3>
+                    
+                    <a href="https://youtu.be/QTG_AR7NWQc" target="_blank" class="relative block aspect-video w-full rounded-lg overflow-hidden border border-slate-700 bg-slate-950 group cursor-pointer">
+                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/QTG_AR7NWQc/maxresdefault.jpg" alt="Online Retail Analysis">
+                        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-14 h-14 bg-orange-600 group-hover:bg-orange-500 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition duration-300">
+                                <svg class="w-6 h-6 fill-white ml-1" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Project 2: Netflix Analysis -->
+            <article class="bg-cardBg border border-slate-800 rounded-2xl overflow-hidden shadow-xl hover:border-orange-500/30 transition flex flex-col justify-between">
+                <div class="p-6">
+                    <div class="flex items-center justify-between gap-2 mb-4">
+                        <span class="text-xs font-semibold tracking-wider text-red-400 uppercase">Streaming</span>
+                        <a href="https://www.kaggle.com/datasets/shivamb/netflix-shows" target="_blank" class="text-xs text-slate-400 hover:text-white transition">Get Dataset ↗</a>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 line-clamp-2">What's Really on Netflix? SQL Data Analysis Project</h3>
+                    
+                    <a href="https://youtu.be/WfRIKZu23hI" target="_blank" class="relative block aspect-video w-full rounded-lg overflow-hidden border border-slate-700 bg-slate-950 group cursor-pointer">
+                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/WfRIKZu23hI/maxresdefault.jpg" alt="Netflix Analysis">
+                        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition"></div>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-14 h-14 bg-orange-600 group-hover:bg-orange-500 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition duration-300">
+                                <svg class="w-6 h-6 fill-white ml-1" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- About & Contact Section -->
+    <section id="about" class="bg-slate-900 border-t border-slate-800 py-16">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold mb-4">About Me</h2>
+            <p class="text-slate-400 max-w-xl mx-auto mb-8 text-sm leading-relaxed">
+                Hi, I'm Arda. I build structured, noise-free code tutorials for data professionals. This website serves as my project portfolio hub, companion repository to my YouTube channel.
+            </p>
+            
+            <!-- Contact Box -->
+            <div class="bg-darkBg/60 border border-slate-800 max-w-md mx-auto p-6 rounded-2xl mb-8">
+                <h3 class="font-bold mb-2">Let's Collaborate!</h3>
+                <p class="text-xs text-slate-400 mb-4">For job offers, projects, or feedback, feel free to drop me an email.</p>
+                <a href="mailto:ardaarda0793@icloud.com" class="inline-block bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-slate-950 text-sm font-bold px-6 py-2.5 rounded-lg transition">
+                    Send an Email
+                </a>
+            </div>
+
+            <div class="flex justify-center space-x-4">
+                <a href="https://www.linkedin.com/in/f-arda-ozturk-67831b41a/" target="_blank" class="text-sm font-medium text-orange-400 hover:text-orange-300 transition">LinkedIn</a>
+                <span class="text-slate-700">•</span>
+                <a href="https://github.com/ardaztt" target="_blank" class="text-sm font-medium text-amber-400 hover:text-amber-300 transition">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-darkBg py-8 text-center text-xs text-slate-500 border-t border-slate-900">
+        <p>© 2026 Arda Data. Built for Data Analysts.</p>
+    </footer>
+
+</body>
+</html>
