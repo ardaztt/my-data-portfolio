@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arda Data | Data Analysis Project Hub</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="End-to-end data analysis projects portfolio by Arda Data. Practice with real-world SQL, Python, Excel, and PowerBI datasets.">
+    <meta name="keywords" content="Data Analysis, SQL, Python, Excel, PowerBI, Portfolio, Data Analytics">
+    <meta name="author" content="Arda Data">
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Arda Data | Data Analysis Project Hub">
+    <meta property="og:description" content="Explore end-to-end data analysis projects with step-by-step video tutorials and real-world datasets.">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -29,17 +40,17 @@
         <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
             
             <!-- Logo -->
-            <a href="#" class="flex items-center space-x-2 group">
+            <a href="#" class="flex items-center space-x-2 group" aria-label="Arda Data Home">
                 <span class="text-2xl font-black tracking-wider bg-gradient-to-r from-orange-500 to-amber-400 bg-clip-text text-transparent group-hover:opacity-90 transition">
                     ARDA DATA
                 </span>
             </a>
 
-            <nav class="flex space-x-6 text-sm font-medium text-slate-300">
+            <nav class="flex space-x-6 text-sm font-medium text-slate-300" aria-label="Main Navigation">
                 <a href="#projects" class="hover:text-white transition">Projects</a>
                 <a href="#skills" class="hover:text-white transition">Skills</a>
                 <a href="#about" class="hover:text-white transition">About & Contact</a>
-                <a href="https://www.youtube.com/@ardadata" target="_blank" class="text-orange-500 hover:text-orange-400 transition font-bold">YouTube Channel →</a>
+                <a href="https://www.youtube.com/@ardadata" target="_blank" rel="noopener noreferrer" class="text-orange-500 hover:text-orange-400 transition font-bold" aria-label="Visit YouTube Channel">YouTube Channel →</a>
             </nav>
         </div>
     </header>
@@ -56,15 +67,15 @@
         <div class="flex justify-center flex-wrap gap-4">
             <a href="#projects" class="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-slate-950 font-bold px-6 py-3 rounded-lg transition shadow-lg shadow-orange-500/20">Browse Projects</a>
             <!-- CV İndirme Butonu -->
-            <a href="CV.pdf" download="Arda_Ozturk_CV.pdf" class="border border-orange-500/50 hover:border-orange-500 text-orange-400 hover:text-orange-300 px-6 py-3 rounded-lg transition flex items-center gap-2">
-                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
+            <a href="CV.pdf" download="Arda_Ozturk_CV.pdf" aria-label="Download Arda Ozturk's CV" class="border border-orange-500/50 hover:border-orange-500 text-orange-400 hover:text-orange-300 px-6 py-3 rounded-lg transition flex items-center gap-2">
+                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/></svg>
                 Download CV
             </a>
         </div>
     </section>
 
     <!-- İstatistik Kartları -->
-    <section class="max-w-5xl mx-auto px-4 mb-16">
+    <section class="max-w-5xl mx-auto px-4 mb-16" aria-label="Key Statistics">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div class="bg-cardBg/40 border border-slate-800/80 rounded-xl p-6 text-center">
                 <div class="text-3xl font-extrabold text-orange-500 mb-1">15+</div>
@@ -96,7 +107,7 @@
         </div>
     </section>
 
-<!-- Projects Section with Interactive Category Navigation -->
+    <!-- Projects Section with Interactive Category Navigation -->
     <main id="projects" class="max-w-5xl mx-auto px-4 py-12 border-t border-slate-800/50">
         
         <!-- KATEGORİ MENÜSÜ (SEKMELER) -->
@@ -104,16 +115,16 @@
             <h2 class="text-2xl font-bold border-l-4 border-orange-500 pl-3">Project Hub</h2>
             
             <!-- Tab Butonları -->
-            <div class="flex flex-wrap gap-2 bg-slate-900/80 p-1.5 rounded-xl border border-slate-800">
-                <button onclick="showCategory('youtube')" id="btn-youtube" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold bg-gradient-to-r from-orange-500 to-amber-500 text-slate-950 transition">YouTube Videos</button>
-                <button onclick="showCategory('excel')" id="btn-excel" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition">Excel</button>
-                <button onclick="showCategory('sql')" id="btn-sql" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition">SQL</button>
-                <button onclick="showCategory('powerbi')" id="btn-powerbi" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition">PowerBI</button>
-                <button onclick="showCategory('python')" id="btn-python" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition">Python</button>
+            <div class="flex flex-wrap gap-2 bg-slate-900/80 p-1.5 rounded-xl border border-slate-800" role="tablist" aria-label="Project Categories">
+                <button onclick="showCategory('youtube')" id="btn-youtube" role="tab" aria-selected="true" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold bg-gradient-to-r from-orange-500 to-amber-500 text-slate-950 transition">YouTube Videos</button>
+                <button onclick="showCategory('excel')" id="btn-excel" role="tab" aria-selected="false" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition">Excel</button>
+                <button onclick="showCategory('sql')" id="btn-sql" role="tab" aria-selected="false" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition">SQL</button>
+                <button onclick="showCategory('powerbi')" id="btn-powerbi" role="tab" aria-selected="false" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition">PowerBI</button>
+                <button onclick="showCategory('python')" id="btn-python" role="tab" aria-selected="false" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition">Python</button>
             </div>
         </div>
 
-        <!-- 1. KATEGORİ: YOUTUBE VIDEOS (13 VİDEO DAHİL) -->
+       <!-- 1. KATEGORİ: YOUTUBE VIDEOS (13 VİDEO DAHİL) -->
         <div id="cat-youtube" class="category-content grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             
             <!-- Project 1 -->
@@ -121,15 +132,15 @@
                 <div class="p-6">
                     <div class="flex items-center justify-between gap-2 mb-4">
                         <span class="text-xs font-semibold tracking-wider text-orange-400 uppercase">SQL</span>
-                        <a href="https://www.kaggle.com/datasets/mashlyn/online-retail-ii-uci" target="_blank" class="text-xs text-slate-400 hover:text-white transition">Get Dataset ↗</a>
+                        <a href="https://www.kaggle.com/datasets/mashlyn/online-retail-ii-uci" target="_blank" rel="noopener noreferrer" aria-label="Get Online Retail II Dataset on Kaggle" class="text-xs text-slate-400 hover:text-white transition">Get Dataset ↗</a>
                     </div>
                     <h3 class="text-xl font-bold mb-4 line-clamp-2">I Analyzed 1 Million Retail Transactions</h3>
-                    <a href="https://youtu.be/QTG_AR7NWQc" target="_blank" class="relative block aspect-video w-full rounded-lg overflow-hidden border border-slate-700 bg-slate-950 group cursor-pointer">
-                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/QTG_AR7NWQc/maxresdefault.jpg" alt="Online Retail Analysis">
+                    <a href="https://youtu.be/QTG_AR7NWQc" target="_blank" rel="noopener noreferrer" aria-label="Watch I Analyzed 1 Million Retail Transactions video tutorial" class="relative block aspect-video w-full rounded-lg overflow-hidden border border-slate-700 bg-slate-950 group cursor-pointer">
+                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/QTG_AR7NWQc/maxresdefault.jpg" alt="Online Retail Analysis" width="480" height="360" loading="lazy">
                         <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition"></div>
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div class="w-14 h-14 bg-orange-600 group-hover:bg-orange-500 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition duration-300">
-                                <svg class="w-6 h-6 fill-white ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <svg class="w-6 h-6 fill-white ml-1" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
                             </div>
                         </div>
                     </a>
@@ -141,15 +152,15 @@
                 <div class="p-6">
                     <div class="flex items-center justify-between gap-2 mb-4">
                         <span class="text-xs font-semibold tracking-wider text-orange-400 uppercase">SQL</span>
-                        <a href="https://www.kaggle.com/datasets/shivamb/netflix-shows" target="_blank" class="text-xs text-slate-400 hover:text-white transition">Get Dataset ↗</a>
+                        <a href="https://www.kaggle.com/datasets/shivamb/netflix-shows" target="_blank" rel="noopener noreferrer" aria-label="Get Netflix Shows Dataset on Kaggle" class="text-xs text-slate-400 hover:text-white transition">Get Dataset ↗</a>
                     </div>
                     <h3 class="text-xl font-bold mb-4 line-clamp-2">Build a Netflix Data Analysis Project in SQL</h3>
-                    <a href="https://youtu.be/WfRIKZu23hI" target="_blank" class="relative block aspect-video w-full rounded-lg overflow-hidden border border-slate-700 bg-slate-950 group cursor-pointer">
-                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/WfRIKZu23hI/maxresdefault.jpg" alt="Netflix Analysis">
+                    <a href="https://youtu.be/WfRIKZu23hI" target="_blank" rel="noopener noreferrer" aria-label="Watch Build a Netflix Data Analysis Project in SQL video tutorial" class="relative block aspect-video w-full rounded-lg overflow-hidden border border-slate-700 bg-slate-950 group cursor-pointer">
+                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/WfRIKZu23hI/maxresdefault.jpg" alt="Netflix Analysis" width="480" height="360" loading="lazy">
                         <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition"></div>
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div class="w-14 h-14 bg-orange-600 group-hover:bg-orange-500 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition duration-300">
-                                <svg class="w-6 h-6 fill-white ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <svg class="w-6 h-6 fill-white ml-1" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
                             </div>
                         </div>
                     </a>
@@ -161,15 +172,15 @@
                 <div class="p-6">
                     <div class="flex items-center justify-between gap-2 mb-4">
                         <span class="text-xs font-semibold tracking-wider text-indigo-400 uppercase">Python</span>
-                        <a href="https://www.kaggle.com/datasets/shivamb/netflix-shows" target="_blank" class="text-xs text-slate-400 hover:text-white transition">Get Dataset ↗</a>
+                        <a href="https://www.kaggle.com/datasets/shivamb/netflix-shows" target="_blank" rel="noopener noreferrer" aria-label="Get Netflix Shows Dataset on Kaggle" class="text-xs text-slate-400 hover:text-white transition">Get Dataset ↗</a>
                     </div>
                     <h3 class="text-xl font-bold mb-4 line-clamp-2">Build a Netflix Data Analysis Project in Python</h3>
-                    <a href="https://youtu.be/0g2QrceJlfM" target="_blank" class="relative block aspect-video w-full rounded-lg overflow-hidden border border-slate-700 bg-slate-950 group cursor-pointer">
-                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/0g2QrceJlfM/maxresdefault.jpg" alt="Netflix Python Analysis">
+                    <a href="https://youtu.be/0g2QrceJlfM" target="_blank" rel="noopener noreferrer" aria-label="Watch Build a Netflix Data Analysis Project in Python video tutorial" class="relative block aspect-video w-full rounded-lg overflow-hidden border border-slate-700 bg-slate-950 group cursor-pointer">
+                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/0g2QrceJlfM/maxresdefault.jpg" alt="Netflix Python Analysis" width="480" height="360" loading="lazy">
                         <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition"></div>
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div class="w-14 h-14 bg-orange-600 group-hover:bg-orange-500 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition duration-300">
-                                <svg class="w-6 h-6 fill-white ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <svg class="w-6 h-6 fill-white ml-1" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
                             </div>
                         </div>
                     </a>
@@ -181,15 +192,15 @@
                 <div class="p-6">
                     <div class="flex items-center justify-between gap-2 mb-4">
                         <span class="text-xs font-semibold tracking-wider text-indigo-400 uppercase">Python</span>
-                        <a href="https://www.kaggle.com/datasets/maharshipandya/-spotify-tracks-dataset" target="_blank" class="text-xs text-slate-400 hover:text-white transition">Get Dataset ↗</a>
+                        <a href="https://www.kaggle.com/datasets/maharshipandya/-spotify-tracks-dataset" target="_blank" rel="noopener noreferrer" aria-label="Get Spotify Dataset on Kaggle" class="text-xs text-slate-400 hover:text-white transition">Get Dataset ↗</a>
                     </div>
                     <h3 class="text-xl font-bold mb-4 line-clamp-2">Build a Spotify Data Analysis Project in Python</h3>
-                    <a href="https://youtu.be/JeLYTOi1NUM" target="_blank" class="relative block aspect-video w-full rounded-lg overflow-hidden border border-slate-700 bg-slate-950 group cursor-pointer">
-                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/JeLYTOi1NUM/maxresdefault.jpg" alt="Spotify Python Analysis">
+                    <a href="https://youtu.be/JeLYTOi1NUM" target="_blank" rel="noopener noreferrer" aria-label="Watch Build a Spotify Data Analysis Project in Python video tutorial" class="relative block aspect-video w-full rounded-lg overflow-hidden border border-slate-700 bg-slate-950 group cursor-pointer">
+                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/JeLYTOi1NUM/maxresdefault.jpg" alt="Spotify Python Analysis" width="480" height="360" loading="lazy">
                         <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition"></div>
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div class="w-14 h-14 bg-orange-600 group-hover:bg-orange-500 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition duration-300">
-                                <svg class="w-6 h-6 fill-white ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <svg class="w-6 h-6 fill-white ml-1" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
                             </div>
                         </div>
                     </a>
@@ -201,15 +212,15 @@
                 <div class="p-6">
                     <div class="flex items-center justify-between gap-2 mb-4">
                         <span class="text-xs font-semibold tracking-wider text-orange-400 uppercase">SQL</span>
-                        <a href="https://www.kaggle.com/datasets/maharshipandya/-spotify-tracks-dataset" target="_blank" class="text-xs text-slate-400 hover:text-white transition">Get Dataset ↗</a>
+                        <a href="https://www.kaggle.com/datasets/maharshipandya/-spotify-tracks-dataset" target="_blank" rel="noopener noreferrer" aria-label="Get Spotify Dataset on Kaggle" class="text-xs text-slate-400 hover:text-white transition">Get Dataset ↗</a>
                     </div>
                     <h3 class="text-xl font-bold mb-4 line-clamp-2">I Analyzed 114,000 Songs Using SQL</h3>
-                    <a href="https://youtu.be/4JnMPKJJmpE" target="_blank" class="relative block aspect-video w-full rounded-lg overflow-hidden border border-slate-700 bg-slate-950 group cursor-pointer">
-                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/4JnMPKJJmpE/maxresdefault.jpg" alt="Spotify SQL Analysis">
+                    <a href="https://youtu.be/4JnMPKJJmpE" target="_blank" rel="noopener noreferrer" aria-label="Watch I Analyzed 114,000 Songs Using SQL video tutorial" class="relative block aspect-video w-full rounded-lg overflow-hidden border border-slate-700 bg-slate-950 group cursor-pointer">
+                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/4JnMPKJJmpE/maxresdefault.jpg" alt="Spotify SQL Analysis" width="480" height="360" loading="lazy">
                         <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition"></div>
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div class="w-14 h-14 bg-orange-600 group-hover:bg-orange-500 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition duration-300">
-                                <svg class="w-6 h-6 fill-white ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <svg class="w-6 h-6 fill-white ml-1" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
                             </div>
                         </div>
                     </a>
@@ -221,15 +232,15 @@
                 <div class="p-6">
                     <div class="flex items-center justify-between gap-2 mb-4">
                         <span class="text-xs font-semibold tracking-wider text-indigo-400 uppercase">Python</span>
-                        <a href="https://www.kaggle.com/datasets/fronkongames/steam-games-dataset" target="_blank" class="text-xs text-slate-400 hover:text-white transition">Get Dataset ↗</a>
+                        <a href="https://www.kaggle.com/datasets/fronkongames/steam-games-dataset" target="_blank" rel="noopener noreferrer" aria-label="Get Steam Games Dataset on Kaggle" class="text-xs text-slate-400 hover:text-white transition">Get Dataset ↗</a>
                     </div>
                     <h3 class="text-xl font-bold mb-4 line-clamp-2">I Analyzed 125,000 Steam Games Using Python</h3>
-                    <a href="https://youtu.be/efQi_9QKhZs" target="_blank" class="relative block aspect-video w-full rounded-lg overflow-hidden border border-slate-700 bg-slate-950 group cursor-pointer">
-                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/efQi_9QKhZs/maxresdefault.jpg" alt="Steam Python Analysis">
+                    <a href="https://youtu.be/efQi_9QKhZs" target="_blank" rel="noopener noreferrer" aria-label="Watch I Analyzed 125,000 Steam Games Using Python video tutorial" class="relative block aspect-video w-full rounded-lg overflow-hidden border border-slate-700 bg-slate-950 group cursor-pointer">
+                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/efQi_9QKhZs/maxresdefault.jpg" alt="Steam Python Analysis" width="480" height="360" loading="lazy">
                         <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition"></div>
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div class="w-14 h-14 bg-orange-600 group-hover:bg-orange-500 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition duration-300">
-                                <svg class="w-6 h-6 fill-white ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <svg class="w-6 h-6 fill-white ml-1" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
                             </div>
                         </div>
                     </a>
@@ -241,15 +252,15 @@
                 <div class="p-6">
                     <div class="flex items-center justify-between gap-2 mb-4">
                         <span class="text-xs font-semibold tracking-wider text-orange-400 uppercase">SQL</span>
-                        <a href="https://www.kaggle.com/datasets/fronkongames/steam-games-dataset" target="_blank" class="text-xs text-slate-400 hover:text-white transition">Get Dataset ↗</a>
+                        <a href="https://www.kaggle.com/datasets/fronkongames/steam-games-dataset" target="_blank" rel="noopener noreferrer" aria-label="Get Steam Games Dataset on Kaggle" class="text-xs text-slate-400 hover:text-white transition">Get Dataset ↗</a>
                     </div>
                     <h3 class="text-xl font-bold mb-4 line-clamp-2">I Analyzed 125,000 Steam Games Using SQL</h3>
-                    <a href="https://youtu.be/5dPv4--Cp-0" target="_blank" class="relative block aspect-video w-full rounded-lg overflow-hidden border border-slate-700 bg-slate-950 group cursor-pointer">
-                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/5dPv4--Cp-0/maxresdefault.jpg" alt="Steam SQL Analysis">
+                    <a href="https://youtu.be/5dPv4--Cp-0" target="_blank" rel="noopener noreferrer" aria-label="Watch I Analyzed 125,000 Steam Games Using SQL video tutorial" class="relative block aspect-video w-full rounded-lg overflow-hidden border border-slate-700 bg-slate-950 group cursor-pointer">
+                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/5dPv4--Cp-0/maxresdefault.jpg" alt="Steam SQL Analysis" width="480" height="360" loading="lazy">
                         <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition"></div>
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div class="w-14 h-14 bg-orange-600 group-hover:bg-orange-500 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition duration-300">
-                                <svg class="w-6 h-6 fill-white ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <svg class="w-6 h-6 fill-white ml-1" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
                             </div>
                         </div>
                     </a>
@@ -261,15 +272,15 @@
                 <div class="p-6">
                     <div class="flex items-center justify-between gap-2 mb-4">
                         <span class="text-xs font-semibold tracking-wider text-indigo-400 uppercase">Python</span>
-                        <a href="https://www.kaggle.com/datasets/raedaddala/imdb-movies-from-1960-to-2023" target="_blank" class="text-xs text-slate-400 hover:text-white transition">Get Dataset ↗</a>
+                        <a href="https://www.kaggle.com/datasets/raedaddala/imdb-movies-from-1960-to-2023" target="_blank" rel="noopener noreferrer" aria-label="Get IMDb Movies Dataset on Kaggle" class="text-xs text-slate-400 hover:text-white transition">Get Dataset ↗</a>
                     </div>
                     <h3 class="text-xl font-bold mb-4 line-clamp-2">Can AI Predict IMDb Ratings?</h3>
-                    <a href="https://youtu.be/iusHpR2bV88" target="_blank" class="relative block aspect-video w-full rounded-lg overflow-hidden border border-slate-700 bg-slate-950 group cursor-pointer">
-                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/iusHpR2bV88/maxresdefault.jpg" alt="IMDb Python Analysis">
+                    <a href="https://youtu.be/iusHpR2bV88" target="_blank" rel="noopener noreferrer" aria-label="Watch Can AI Predict IMDb Ratings? video tutorial" class="relative block aspect-video w-full rounded-lg overflow-hidden border border-slate-700 bg-slate-950 group cursor-pointer">
+                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/iusHpR2bV88/maxresdefault.jpg" alt="IMDb Python Analysis" width="480" height="360" loading="lazy">
                         <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition"></div>
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div class="w-14 h-14 bg-orange-600 group-hover:bg-orange-500 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition duration-300">
-                                <svg class="w-6 h-6 fill-white ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <svg class="w-6 h-6 fill-white ml-1" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
                             </div>
                         </div>
                     </a>
@@ -281,15 +292,15 @@
                 <div class="p-6">
                     <div class="flex items-center justify-between gap-2 mb-4">
                         <span class="text-xs font-semibold tracking-wider text-orange-400 uppercase">SQL</span>
-                        <a href="https://www.kaggle.com/datasets/raedaddala/imdb-movies-from-1960-to-2023" target="_blank" class="text-xs text-slate-400 hover:text-white transition">Get Dataset ↗</a>
+                        <a href="https://www.kaggle.com/datasets/raedaddala/imdb-movies-from-1960-to-2023" target="_blank" rel="noopener noreferrer" aria-label="Get IMDb Movies Dataset on Kaggle" class="text-xs text-slate-400 hover:text-white transition">Get Dataset ↗</a>
                     </div>
                     <h3 class="text-xl font-bold mb-4 line-clamp-2">I Analyzed 63,000 IMDb Movies with SQL</h3>
-                    <a href="https://youtu.be/iiyBIFSEXHo" target="_blank" class="relative block aspect-video w-full rounded-lg overflow-hidden border border-slate-700 bg-slate-950 group cursor-pointer">
-                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/iiyBIFSEXHo/maxresdefault.jpg" alt="IMDb SQL Analysis">
+                    <a href="https://youtu.be/iiyBIFSEXHo" target="_blank" rel="noopener noreferrer" aria-label="Watch I Analyzed 63,000 IMDb Movies with SQL video tutorial" class="relative block aspect-video w-full rounded-lg overflow-hidden border border-slate-700 bg-slate-950 group cursor-pointer">
+                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/iiyBIFSEXHo/maxresdefault.jpg" alt="IMDb SQL Analysis" width="480" height="360" loading="lazy">
                         <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition"></div>
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div class="w-14 h-14 bg-orange-600 group-hover:bg-orange-500 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition duration-300">
-                                <svg class="w-6 h-6 fill-white ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <svg class="w-6 h-6 fill-white ml-1" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
                             </div>
                         </div>
                     </a>
@@ -301,15 +312,15 @@
                 <div class="p-6">
                     <div class="flex items-center justify-between gap-2 mb-4">
                         <span class="text-xs font-semibold tracking-wider text-indigo-400 uppercase">Python</span>
-                        <a href="https://www.kaggle.com/datasets/ashishjangra27/airbnb-dataset" target="_blank" class="text-xs text-slate-400 hover:text-white transition">Get Dataset ↗</a>
+                        <a href="https://www.kaggle.com/datasets/ashishjangra27/airbnb-dataset" target="_blank" rel="noopener noreferrer" aria-label="Get Airbnb Dataset on Kaggle" class="text-xs text-slate-400 hover:text-white transition">Get Dataset ↗</a>
                     </div>
                     <h3 class="text-xl font-bold mb-4 line-clamp-2">What Really Drives Airbnb Prices?</h3>
-                    <a href="https://youtu.be/Wnr1UjG4SI8" target="_blank" class="relative block aspect-video w-full rounded-lg overflow-hidden border border-slate-700 bg-slate-950 group cursor-pointer">
-                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/Wnr1UjG4SI8/maxresdefault.jpg" alt="Airbnb Python Analysis">
+                    <a href="https://youtu.be/Wnr1UjG4SI8" target="_blank" rel="noopener noreferrer" aria-label="Watch What Really Drives Airbnb Prices? video tutorial" class="relative block aspect-video w-full rounded-lg overflow-hidden border border-slate-700 bg-slate-950 group cursor-pointer">
+                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/Wnr1UjG4SI8/maxresdefault.jpg" alt="Airbnb Python Analysis" width="480" height="360" loading="lazy">
                         <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition"></div>
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div class="w-14 h-14 bg-orange-600 group-hover:bg-orange-500 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition duration-300">
-                                <svg class="w-6 h-6 fill-white ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <svg class="w-6 h-6 fill-white ml-1" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
                             </div>
                         </div>
                     </a>
@@ -321,15 +332,15 @@
                 <div class="p-6">
                     <div class="flex items-center justify-between gap-2 mb-4">
                         <span class="text-xs font-semibold tracking-wider text-orange-400 uppercase">SQL</span>
-                        <a href="https://www.kaggle.com/datasets/ashishjangra27/airbnb-dataset" target="_blank" class="text-xs text-slate-400 hover:text-white transition">Get Dataset ↗</a>
+                        <a href="https://www.kaggle.com/datasets/ashishjangra27/airbnb-dataset" target="_blank" rel="noopener noreferrer" aria-label="Get Airbnb Dataset on Kaggle" class="text-xs text-slate-400 hover:text-white transition">Get Dataset ↗</a>
                     </div>
                     <h3 class="text-xl font-bold mb-4 line-clamp-2">Inside Airbnb Pricing Using SQL</h3>
-                    <a href="https://youtu.be/w9dNrFJPqeA" target="_blank" class="relative block aspect-video w-full rounded-lg overflow-hidden border border-slate-700 bg-slate-950 group cursor-pointer">
-                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/w9dNrFJPqeA/maxresdefault.jpg" alt="Airbnb SQL Analysis">
+                    <a href="https://youtu.be/w9dNrFJPqeA" target="_blank" rel="noopener noreferrer" aria-label="Watch Inside Airbnb Pricing Using SQL video tutorial" class="relative block aspect-video w-full rounded-lg overflow-hidden border border-slate-700 bg-slate-950 group cursor-pointer">
+                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/w9dNrFJPqeA/maxresdefault.jpg" alt="Airbnb SQL Analysis" width="480" height="360" loading="lazy">
                         <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition"></div>
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div class="w-14 h-14 bg-orange-600 group-hover:bg-orange-500 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition duration-300">
-                                <svg class="w-6 h-6 fill-white ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <svg class="w-6 h-6 fill-white ml-1" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
                             </div>
                         </div>
                     </a>
@@ -341,15 +352,15 @@
                 <div class="p-6">
                     <div class="flex items-center justify-between gap-2 mb-4">
                         <span class="text-xs font-semibold tracking-wider text-indigo-400 uppercase">Python</span>
-                        <a href="https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce" target="_blank" class="text-xs text-slate-400 hover:text-white transition">Get Dataset ↗</a>
+                        <a href="https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce" target="_blank" rel="noopener noreferrer" aria-label="Get Brazilian E-Commerce Dataset on Kaggle" class="text-xs text-slate-400 hover:text-white transition">Get Dataset ↗</a>
                     </div>
                     <h3 class="text-xl font-bold mb-4 line-clamp-2">What 100,000 Online Orders Revealed (Python Analysis)</h3>
-                    <a href="https://youtu.be/5zUFxB4tlXo" target="_blank" class="relative block aspect-video w-full rounded-lg overflow-hidden border border-slate-700 bg-slate-950 group cursor-pointer">
-                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/5zUFxB4tlXo/maxresdefault.jpg" alt="Python E-Commerce Analysis">
+                    <a href="https://youtu.be/5zUFxB4tlXo" target="_blank" rel="noopener noreferrer" aria-label="Watch What 100,000 Online Orders Revealed video tutorial" class="relative block aspect-video w-full rounded-lg overflow-hidden border border-slate-700 bg-slate-950 group cursor-pointer">
+                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/5zUFxB4tlXo/maxresdefault.jpg" alt="Python E-Commerce Analysis" width="480" height="360" loading="lazy">
                         <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition"></div>
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div class="w-14 h-14 bg-orange-600 group-hover:bg-orange-500 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition duration-300">
-                                <svg class="w-6 h-6 fill-white ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <svg class="w-6 h-6 fill-white ml-1" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
                             </div>
                         </div>
                     </a>
@@ -361,15 +372,15 @@
                 <div class="p-6">
                     <div class="flex items-center justify-between gap-2 mb-4">
                         <span class="text-xs font-semibold tracking-wider text-orange-400 uppercase">SQL</span>
-                        <a href="https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce" target="_blank" class="text-xs text-slate-400 hover:text-white transition">Get Dataset ↗</a>
+                        <a href="https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce" target="_blank" rel="noopener noreferrer" aria-label="Get Brazilian E-Commerce Dataset on Kaggle" class="text-xs text-slate-400 hover:text-white transition">Get Dataset ↗</a>
                     </div>
                     <h3 class="text-xl font-bold mb-4 line-clamp-2">Can SQL Find Your Best Customers?</h3>
-                    <a href="https://youtu.be/EbNlNj2Xn7E" target="_blank" class="relative block aspect-video w-full rounded-lg overflow-hidden border border-slate-700 bg-slate-950 group cursor-pointer">
-                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/EbNlNj2Xn7E/maxresdefault.jpg" alt="SQL Customer Analysis">
+                    <a href="https://youtu.be/EbNlNj2Xn7E" target="_blank" rel="noopener noreferrer" aria-label="Watch Can SQL Find Your Best Customers? video tutorial" class="relative block aspect-video w-full rounded-lg overflow-hidden border border-slate-700 bg-slate-950 group cursor-pointer">
+                        <img class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition duration-300" src="https://img.youtube.com/vi/EbNlNj2Xn7E/maxresdefault.jpg" alt="SQL Customer Analysis" width="480" height="360" loading="lazy">
                         <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition"></div>
                         <div class="absolute inset-0 flex items-center justify-center">
                             <div class="w-14 h-14 bg-orange-600 group-hover:bg-orange-500 rounded-full flex items-center justify-center shadow-lg transform group-hover:scale-110 transition duration-300">
-                                <svg class="w-6 h-6 fill-white ml-1" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <svg class="w-6 h-6 fill-white ml-1" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
                             </div>
                         </div>
                     </a>
@@ -378,8 +389,10 @@
 
         </div>
 
-        <!-- 2. KATEGORİ: EXCEL -->
-<div id="cat-excel" class="category-content hidden grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- 2. KATEGORİ: EXCEL -->
+<div id="cat-excel" class="category-content hidden grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+    
+    <!-- Excel Card 1 -->
     <article class="bg-cardBg border border-slate-800 rounded-2xl overflow-hidden shadow-xl p-6 flex flex-col justify-between">
         <div>
             <div class="flex items-center justify-between gap-2 mb-4">
@@ -388,48 +401,102 @@
             </div>
             
             <h3 class="text-xl font-bold mb-3">Excel Sales Performance & Data Analysis</h3>
-            <p class="text-sm text-slate-400 mb-6 leading-relaxed">
-                A comprehensive data analysis workflow in Excel. Handled conditional counting with SUMIFS/COUNTIFS, dynamic lookups using XLOOKUP, and text manipulation using logical functions alongside Pivot Table reports.
-            </p>
+            
+            <!-- Fixed 3-Line Read More / Show Less Toggle -->
+            <div class="mb-6">
+                <input type="checkbox" id="read-more-1" class="read-more-check peer hidden">
+                <p class="text-sm text-slate-400 leading-relaxed line-clamp-3 peer-checked:line-clamp-none transition-all">
+                    A comprehensive data analysis workflow in Excel. Handled conditional counting with SUMIFS/COUNTIFS, dynamic lookups using XLOOKUP, and text manipulation using logical functions alongside Pivot Table reports to extract actionable retail business metrics and trends.
+                </p>
+                <label for="read-more-1" class="inline-block text-slate-400 hover:text-white font-semibold text-xs cursor-pointer mt-1 border-b border-dashed border-slate-600 hover:border-white transition">
+                    <span class="read-more-btn">...Read more</span>
+                    <span class="show-less-btn hidden">Show less ↑</span>
+                </label>
+            </div>
+        </div>
 
-            <!-- Image Carousel -->
+        <div>
             <div class="relative group rounded-xl overflow-hidden border border-slate-700 bg-slate-950">
-                <div id="excel-carousel" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar h-64">
-                    
-                    <!-- Image 1: Questions -->
+                <div id="excel-carousel-1" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar h-64">
                     <div class="snap-center shrink-0 w-full h-full relative">
                         <span class="absolute top-2 left-2 bg-slate-900/90 text-xs px-2.5 py-1 rounded-md text-slate-300 font-semibold border border-slate-700/80 z-10">1 / 3 - Questions</span>
-                        <img onclick="openImageLightbox(this.src)" class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300" src="https://i.ibb.co/8ZdKQ9g/questions.png" alt="Excel Questions">
+                        <img onclick="openGalleryLightbox('excel-carousel-1', 0)" onkeydown="if(event.key==='Enter'||event.key===' ') openGalleryLightbox('excel-carousel-1', 0)" role="button" tabindex="0" class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300" src="https://i.ibb.co/8ZdKQ9g/questions.png" alt="Excel Questions Sheet" width="800" height="600" loading="lazy">
                     </div>
 
-                    <!-- Image 2: Pivot -->
                     <div class="snap-center shrink-0 w-full h-full relative">
                         <span class="absolute top-2 left-2 bg-slate-900/90 text-xs px-2.5 py-1 rounded-md text-slate-300 font-semibold border border-slate-700/80 z-10">2 / 3 - Pivot Table</span>
-                        <img onclick="openImageLightbox(this.src)" class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300" src="https://i.ibb.co/jkwJtN1L/pivot.png" alt="Excel Pivot Analysis">
+                        <img onclick="openGalleryLightbox('excel-carousel-1', 1)" onkeydown="if(event.key==='Enter'||event.key===' ') openGalleryLightbox('excel-carousel-1', 1)" role="button" tabindex="0" class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300" src="https://i.ibb.co/jkwJtN1L/pivot.png" alt="Excel Pivot Analysis Sheet" width="800" height="600" loading="lazy">
                     </div>
 
-                    <!-- Image 3: Formulas -->
                     <div class="snap-center shrink-0 w-full h-full relative">
                         <span class="absolute top-2 left-2 bg-slate-900/90 text-xs px-2.5 py-1 rounded-md text-slate-300 font-semibold border border-slate-700/80 z-10">3 / 3 - Formulas</span>
-                        <img onclick="openImageLightbox(this.src)" class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300" src="https://i.ibb.co/PGTS6sSW/text.png" alt="Excel Formulas">
+                        <img onclick="openGalleryLightbox('excel-carousel-1', 2)" onkeydown="if(event.key==='Enter'||event.key===' ') openGalleryLightbox('excel-carousel-1', 2)" role="button" tabindex="0" class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300" src="https://i.ibb.co/PGTS6sSW/text.png" alt="Excel Formulas Sheet" width="800" height="600" loading="lazy">
                     </div>
-
                 </div>
 
-                <!-- Left Arrow -->
-                <button onclick="scrollCarousel('excel-carousel', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-2 rounded-full border border-slate-700 shadow-lg transition z-10">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                <button type="button" onclick="scrollCarousel('excel-carousel-1', -1)" aria-label="Previous slide" class="absolute left-2 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-2 rounded-full border border-slate-700 shadow-lg transition z-10">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
                 </button>
 
-                <!-- Right Arrow -->
-                <button onclick="scrollCarousel('excel-carousel', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-2 rounded-full border border-slate-700 shadow-lg transition z-10">
-                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                <button type="button" onclick="scrollCarousel('excel-carousel-1', 1)" aria-label="Next slide" class="absolute right-2 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-2 rounded-full border border-slate-700 shadow-lg transition z-10">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
                 </button>
             </div>
 
             <p class="text-xs text-slate-500 mt-3 text-center">💡 Click on images to view full size in high resolution.</p>
         </div>
     </article>
+
+    <!-- Excel Card 2 -->
+    <article class="bg-cardBg border border-slate-800 rounded-2xl overflow-hidden shadow-xl p-6 flex flex-col justify-between">
+        <div>
+            <div class="flex items-center justify-between gap-2 mb-4">
+                <span class="text-xs font-semibold tracking-wider text-emerald-400 uppercase">Excel Analysis</span>
+                <span class="text-xs text-slate-400">Advanced Formulas & Logic</span>
+            </div>
+            
+            <h3 class="text-xl font-bold mb-3">Excel Sales Metrics & Formula Workflows</h3>
+            
+            <!-- Fixed 3-Line Read More / Show Less Toggle -->
+            <div class="mb-6">
+                <input type="checkbox" id="read-more-2" class="read-more-check peer hidden">
+                <p class="text-sm text-slate-400 leading-relaxed line-clamp-3 peer-checked:line-clamp-none transition-all">
+                    Applied advanced Excel functions including AVERAGEIFS for multi-criteria conditional averages, MAX/MIN for margin extremes, ROUND for metric precision, combined COUNTIFS for multi-region filtering, and dynamic UNIQUE arrays for category extraction.
+                </p>
+                <label for="read-more-2" class="inline-block text-slate-400 hover:text-white font-semibold text-xs cursor-pointer mt-1 border-b border-dashed border-slate-600 hover:border-white transition">
+                    <span class="read-more-btn">...Read more</span>
+                    <span class="show-less-btn hidden">Show less ↑</span>
+                </label>
+            </div>
+        </div>
+
+        <div>
+            <div class="relative group rounded-xl overflow-hidden border border-slate-700 bg-slate-950">
+                <div id="excel-carousel-2" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar h-64">
+                    <div class="snap-center shrink-0 w-full h-full relative">
+                        <span class="absolute top-2 left-2 bg-slate-900/90 text-xs px-2.5 py-1 rounded-md text-slate-300 font-semibold border border-slate-700/80 z-10">1 / 2 - Analysis Sheet</span>
+                        <img onclick="openGalleryLightbox('excel-carousel-2', 0)" onkeydown="if(event.key==='Enter'||event.key===' ') openGalleryLightbox('excel-carousel-2', 0)" role="button" tabindex="0" class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300" src="https://i.ibb.co/tTptKLJW/questions.png" alt="Excel Questions Sheet" width="800" height="600" loading="lazy">
+                    </div>
+
+                    <div class="snap-center shrink-0 w-full h-full relative">
+                        <span class="absolute top-2 left-2 bg-slate-900/90 text-xs px-2.5 py-1 rounded-md text-slate-300 font-semibold border border-slate-700/80 z-10">2 / 2 - Formula Breakdown</span>
+                        <img onclick="openGalleryLightbox('excel-carousel-2', 1)" onkeydown="if(event.key==='Enter'||event.key===' ') openGalleryLightbox('excel-carousel-2', 1)" role="button" tabindex="0" class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300" src="https://i.ibb.co/Kp7jpTL4/formulas.png" alt="Excel Formulas Breakdown Sheet" width="800" height="600" loading="lazy">
+                    </div>
+                </div>
+
+                <button type="button" onclick="scrollCarousel('excel-carousel-2', -1)" aria-label="Previous slide" class="absolute left-2 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-2 rounded-full border border-slate-700 shadow-lg transition z-10">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+                </button>
+
+                <button type="button" onclick="scrollCarousel('excel-carousel-2', 1)" aria-label="Next slide" class="absolute right-2 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-2 rounded-full border border-slate-700 shadow-lg transition z-10">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+                </button>
+            </div>
+
+            <p class="text-xs text-slate-500 mt-3 text-center">💡 Click on images to view full size in high resolution.</p>
+        </div>
+    </article>
+
 </div>
 
         <!-- 3. KATEGORİ: SQL -->
@@ -448,6 +515,7 @@
         </div>
 
     </main>
+
     <!-- About & Contact Section -->
     <section id="about" class="bg-slate-900 border-t border-slate-800 py-16">
         <div class="max-w-4xl mx-auto px-4 text-center">
@@ -466,9 +534,9 @@
             </div>
 
             <div class="flex justify-center space-x-4">
-                <a href="https://www.linkedin.com/in/f-arda-ozturk-67831b41a/" target="_blank" class="text-sm font-medium text-orange-400 hover:text-orange-300 transition">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/f-arda-ozturk-67831b41a/" target="_blank" rel="noopener noreferrer" aria-label="Visit Arda's LinkedIn Profile" class="text-sm font-medium text-orange-400 hover:text-orange-300 transition">LinkedIn</a>
                 <span class="text-slate-700">•</span>
-                <a href="https://github.com/ardaztt" target="_blank" class="text-sm font-medium text-amber-400 hover:text-amber-300 transition">GitHub</a>
+                <a href="https://github.com/ardaztt" target="_blank" rel="noopener noreferrer" aria-label="Visit Arda's GitHub Profile" class="text-sm font-medium text-amber-400 hover:text-amber-300 transition">GitHub</a>
             </div>
         </div>
     </section>
@@ -479,26 +547,49 @@
     </footer>
 
 <!-- Tam Ekran Görsel Modalı (Lightbox) -->
-<div id="image-lightbox" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4" onclick="closeImageLightbox()">
-    <button class="absolute top-4 right-4 text-white bg-slate-800/80 hover:bg-orange-500 p-2.5 rounded-full border border-slate-700 transition">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+<div id="image-lightbox" class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur-md flex items-center justify-center p-4" onclick="closeImageLightbox()" role="dialog" aria-modal="true" aria-label="Full screen image preview">
+    <button type="button" onclick="closeImageLightbox()" aria-label="Close full size view" class="absolute top-4 right-4 text-white bg-slate-800/80 hover:bg-orange-500 p-2.5 rounded-full border border-slate-700 transition z-50">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
     </button>
-    <img id="lightbox-img" class="max-w-full max-h-[95vh] object-contain rounded-lg shadow-2xl border border-slate-800" src="" alt="Tam Ekran Görsel">
+
+    <button type="button" onclick="event.stopPropagation(); navigateLightbox(-1)" aria-label="Previous image" class="absolute left-4 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-3 rounded-full border border-slate-700 transition z-50 shadow-2xl">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
+    </button>
+
+    <button type="button" onclick="event.stopPropagation(); navigateLightbox(1)" aria-label="Next image" class="absolute right-4 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-3 rounded-full border border-slate-700 transition z-50 shadow-2xl">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
+    </button>
+
+    <img id="lightbox-img" onclick="event.stopPropagation()" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl border border-slate-800" src="" alt="Full screen image view">
 </div>
 
-<!-- Kaydırma Çubuğunu Gizleme Stili -->
 <style>
     .no-scrollbar::-webkit-scrollbar { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+    .read-more-check:checked ~ label .read-more-btn { display: none; }
+    .read-more-check:checked ~ label .show-less-btn { display: inline; }	
 </style>
 
-<!-- Tüm Fonksiyonlar Tek Script İçinde -->
 <script>
+    let currentLightboxImages = [];
+    let currentLightboxIndex = 0;
+
     function showCategory(category) {
         document.querySelectorAll('.category-content').forEach(el => el.classList.add('hidden'));
-        document.querySelectorAll('.tab-btn').forEach(btn => btn.className = "tab-btn px-4 py-2 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition");
-        document.getElementById('cat-' + category).classList.remove('hidden');
-        document.getElementById('btn-' + category).className = "tab-btn px-4 py-2 rounded-lg text-sm font-semibold bg-gradient-to-r from-orange-500 to-amber-500 text-slate-950 transition";
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.className = "tab-btn px-4 py-2 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition";
+            btn.setAttribute('aria-selected', 'false');
+        });
+        
+        const targetCategory = document.getElementById('cat-' + category);
+        const targetBtn = document.getElementById('btn-' + category);
+        
+        if (targetCategory) targetCategory.classList.remove('hidden');
+        if (targetBtn) {
+            targetBtn.className = "tab-btn px-4 py-2 rounded-lg text-sm font-semibold bg-gradient-to-r from-orange-500 to-amber-500 text-slate-950 transition";
+            targetBtn.setAttribute('aria-selected', 'true');
+        }
     }
 
     function scrollCarousel(carouselId, direction) {
@@ -509,16 +600,52 @@
         }
     }
 
-    function openImageLightbox(imageSrc) {
-        document.getElementById('lightbox-img').src = imageSrc;
+    // Sadece bulunulan galeri kutusundaki (carousel) resimleri tam ekrana taşır
+    function openGalleryLightbox(carouselId, index) {
+        const carousel = document.getElementById(carouselId);
+        if (!carousel) return;
+
+        const groupImages = Array.from(carousel.querySelectorAll('img'));
+        currentLightboxImages = groupImages.map(img => img.src);
+        currentLightboxIndex = index;
+
+        updateLightboxImage();
         document.getElementById('image-lightbox').classList.remove('hidden');
         document.body.classList.add('overflow-hidden');
+    }
+
+    function navigateLightbox(direction) {
+        if (currentLightboxImages.length === 0) return;
+        currentLightboxIndex = (currentLightboxIndex + direction + currentLightboxImages.length) % currentLightboxImages.length;
+        updateLightboxImage();
+    }
+
+    function updateLightboxImage() {
+        document.getElementById('lightbox-img').src = currentLightboxImages[currentLightboxIndex];
     }
 
     function closeImageLightbox() {
         document.getElementById('image-lightbox').classList.add('hidden');
         document.body.classList.remove('overflow-hidden');
     }
+
+    document.addEventListener('keydown', function(e) {
+        const lightbox = document.getElementById('image-lightbox');
+        if (!lightbox.classList.contains('hidden')) {
+            if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                navigateLightbox(-1);
+            }
+            if (e.key === 'ArrowRight') {
+                e.preventDefault();
+                navigateLightbox(1);
+            }
+            if (e.key === 'Escape') {
+                e.preventDefault();
+                closeImageLightbox();
+            }
+        }
+    });
 </script>
 
 </body>
