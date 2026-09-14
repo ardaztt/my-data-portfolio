@@ -3,20 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Arda Data | Data Analysis Project Hub</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="End-to-end data analysis projects portfolio by Arda Data. Practice with real-world SQL, Python, Excel, and PowerBI datasets.">
-    <meta name="keywords" content="Data Analysis, SQL, Python, Excel, PowerBI, Portfolio, Data Analytics">
+    <meta
+        name="description"
+        content="End-to-end data analysis projects portfolio by Arda Data. Practice with real-world SQL, Python, Excel, and PowerBI datasets.">
+    <meta
+        name="keywords"
+        content="Data Analysis, SQL, Python, Excel, PowerBI, Portfolio, Data Analytics">
     <meta name="author" content="Arda Data">
 
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Arda Data | Data Analysis Project Hub">
-    <meta property="og:description" content="Explore end-to-end data analysis projects with step-by-step video tutorials and real-world datasets.">
+    <meta
+        property="og:description"
+        content="Explore end-to-end data analysis projects with step-by-step video tutorials and real-world datasets.">
 
-    <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS CDN
+         Kept for the current single-file GitHub Pages setup.
+         For a full production build, compile Tailwind into a static CSS file. -->
     <script src="https://cdn.tailwindcss.com"></script>
+
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -30,7 +40,7 @@
                     }
                 }
             }
-        }
+        };
     </script>
 </head>
 
@@ -45,45 +55,112 @@
     </div>
 
     <!-- Header / Navbar -->
-    <header id="navbar" class="border-b border-slate-800 bg-darkBg/80 backdrop-blur sticky top-0 z-50 transition-colors duration-300">
+    <header
+        id="navbar"
+        class="border-b border-slate-800 bg-darkBg/80 backdrop-blur sticky top-0 z-50 transition-colors duration-300">
+
         <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
 
             <!-- Logo -->
-            <a href="#" class="flex items-center space-x-2 group" aria-label="Arda Data Home">
-                <span class="text-2xl font-black tracking-wider bg-gradient-to-r from-orange-500 to-amber-400 bg-clip-text text-transparent group-hover:opacity-90 transition">
+            <a
+                href="#"
+                class="flex items-center space-x-2 group"
+                aria-label="Arda Data Home">
+
+                <span
+                    class="text-2xl font-black tracking-wider bg-gradient-to-r from-orange-500 to-amber-400 bg-clip-text text-transparent group-hover:opacity-90 transition">
                     ARDA DATA
                 </span>
             </a>
 
-            <nav class="flex items-center space-x-6 text-sm font-medium text-slate-300" aria-label="Main Navigation">
-                <a href="#projects" onclick="event.preventDefault(); scrollToSection('projects', 1);" class="hover:text-white transition">Projects</a>
-                <a href="#skills" onclick="event.preventDefault(); scrollToSection('skills', 4);" class="hover:text-white transition">Skills</a>
-                <a href="#about" onclick="event.preventDefault(); scrollToSection('about', 1);" class="hover:text-white transition">About & Contact</a>
-                <a href="https://www.youtube.com/@ardadata" target="_blank" rel="noopener noreferrer" class="text-orange-500 hover:text-orange-400 transition font-bold" aria-label="Visit YouTube Channel">YouTube Channel →</a>
+            <nav
+                class="flex items-center space-x-6 text-sm font-medium text-slate-300"
+                aria-label="Main Navigation">
+
+                <a
+                    href="#projects"
+                    class="nav-link hover:text-white transition"
+                    data-i18n="Projects">
+                    Projects
+                </a>
+
+                <a
+                    href="#skills"
+                    class="nav-link hover:text-white transition"
+                    data-i18n="Skills">
+                    Skills
+                </a>
+
+                <a
+                    href="#about"
+                    class="nav-link hover:text-white transition"
+                    data-i18n="About & Contact">
+                    About & Contact
+                </a>
+
+                <a
+                    href="https://www.youtube.com/@ardadata"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-orange-500 hover:text-orange-400 transition font-bold"
+                    aria-label="Visit YouTube Channel"
+                    data-i18n="YouTube Channel →">
+                    YouTube Channel →
+                </a>
 
                 <!-- Language Switcher -->
-                <div class="flex items-center bg-slate-900/80 border border-slate-700 rounded-lg p-0.5">
-                    <button type="button" id="lang-en" onclick="setLanguage('en')" class="px-2 py-1 rounded-md text-xs font-bold bg-orange-500 text-slate-950 transition">EN</button>
-                    <button type="button" id="lang-tr" onclick="setLanguage('tr')" class="px-2 py-1 rounded-md text-xs font-bold text-slate-400 hover:text-white transition">TR</button>
+                <div
+                    class="flex items-center bg-slate-900/80 border border-slate-700 rounded-lg p-0.5"
+                    aria-label="Language selector">
+
+                    <button
+                        type="button"
+                        id="lang-en"
+                        class="px-2 py-1 rounded-md text-xs font-bold bg-orange-500 text-slate-950 transition"
+                        aria-pressed="true">
+                        EN
+                    </button>
+
+                    <button
+                        type="button"
+                        id="lang-tr"
+                        class="px-2 py-1 rounded-md text-xs font-bold text-slate-400 hover:text-white transition"
+                        aria-pressed="false">
+                        TR
+                    </button>
                 </div>
 
                 <!-- Dark / Light Mode -->
                 <button
                     type="button"
                     id="theme-toggle"
-                    onclick="toggleTheme()"
                     class="w-9 h-9 flex items-center justify-center rounded-lg bg-slate-900/80 border border-slate-700 text-slate-300 hover:text-orange-400 hover:border-orange-500/50 transition"
                     aria-label="Switch to light mode"
                     title="Switch to light mode">
 
-                    <!-- Sun Icon -->
-                    <svg id="sun-icon" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <svg
+                        id="sun-icon"
+                        class="w-4 h-4 hidden"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true">
+
                         <circle cx="12" cy="12" r="4"></circle>
-                        <path stroke-linecap="round" stroke-width="2" d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+
+                        <path
+                            stroke-linecap="round"
+                            stroke-width="2"
+                            d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
                     </svg>
 
-                    <!-- Moon Icon -->
-                    <svg id="moon-icon" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <svg
+                        id="moon-icon"
+                        class="w-4 h-4"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true">
+
                         <path d="M21.75 15.5A9.75 9.75 0 0 1 8.5 2.25 9.75 9.75 0 1 0 21.75 15.5Z"/>
                     </svg>
                 </button>
@@ -92,102 +169,234 @@
     </header>
 
     <!-- Hero Section -->
-    <section aria-labelledby="hero-heading" class="max-w-4xl mx-auto px-4 py-20 text-center">
-        <h1 id="hero-heading" class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 leading-tight">
-            Data Analysis Projects <br>
-            <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-400">& Case Studies</span>
+    <section
+        aria-labelledby="hero-heading"
+        class="max-w-4xl mx-auto px-4 py-20 text-center">
+
+        <h1
+            id="hero-heading"
+            class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 leading-tight">
+
+            <span data-i18n="Data Analysis Projects">
+                Data Analysis Projects
+            </span>
+
+            <br>
+
+            <span
+                data-i18n="& Case Studies"
+                class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-400">
+                & Case Studies
+            </span>
         </h1>
 
-        <p class="text-lg text-slate-400 max-w-2xl mx-auto mb-8">
+        <p
+            data-i18n="hero-description"
+            class="text-lg text-slate-400 max-w-2xl mx-auto mb-8">
             I design and execute end-to-end data analysis projects. Explore real-world datasets, reproducible code pipelines, and technical walkthroughs built to solve complex business problems.
         </p>
 
         <div class="flex justify-center flex-wrap gap-4">
-            <a href="#projects" onclick="event.preventDefault(); scrollToSection('projects', 1);" class="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-slate-950 font-bold px-6 py-3 rounded-lg transition shadow-lg shadow-orange-500/20">
+
+            <a
+                href="#projects"
+                class="scroll-link bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-slate-950 font-bold px-6 py-3 rounded-lg transition shadow-lg shadow-orange-500/20"
+                data-i18n="Browse Projects">
                 Browse Projects
             </a>
 
-            <a href="CV.pdf" download="Arda_Ozturk_CV.pdf" aria-label="Download Arda Ozturk's CV" class="border border-orange-500/50 hover:border-orange-500 text-orange-400 hover:text-orange-300 px-6 py-3 rounded-lg transition flex items-center gap-2">
-                <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+            <a
+                href="CV.pdf"
+                download="Arda_Ozturk_CV.pdf"
+                aria-label="Download Arda Ozturk's CV"
+                class="border border-orange-500/50 hover:border-orange-500 text-orange-400 hover:text-orange-300 px-6 py-3 rounded-lg transition flex items-center gap-2">
+
+                <svg
+                    class="w-4 h-4 fill-current"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true">
+
                     <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z"/>
                 </svg>
-                Download CV
+
+                <span data-i18n="Download CV">
+                    Download CV
+                </span>
             </a>
         </div>
     </section>
 
     <!-- Statistics -->
-    <section class="max-w-5xl mx-auto px-4 mb-16" aria-label="Key Statistics">
+    <section
+        class="max-w-5xl mx-auto px-4 mb-16"
+        aria-label="Key Statistics">
+
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
 
             <div class="bg-cardBg/40 border border-slate-800/80 rounded-xl p-6 text-center">
                 <div class="text-3xl font-extrabold text-orange-500 mb-1">15+</div>
-                <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Projects</div>
+                <div
+                    class="text-xs text-slate-400 uppercase tracking-wider font-semibold"
+                    data-i18n="Projects">
+                    Projects
+                </div>
             </div>
 
             <div class="bg-cardBg/40 border border-slate-800/80 rounded-xl p-6 text-center">
                 <div class="text-3xl font-extrabold text-amber-500 mb-1">2M+</div>
-                <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Rows Analyzed</div>
+                <div
+                    class="text-xs text-slate-400 uppercase tracking-wider font-semibold"
+                    data-i18n="Rows Analyzed">
+                    Rows Analyzed
+                </div>
             </div>
 
             <div class="bg-cardBg/40 border border-slate-800/80 rounded-xl p-6 text-center">
-                <div class="text-3xl font-extrabold text-orange-500 mb-1">Portfolio</div>
-                <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Case Studies</div>
+                <div
+                    class="text-3xl font-extrabold text-orange-500 mb-1"
+                    data-i18n="Portfolio">
+                    Portfolio
+                </div>
+
+                <div
+                    class="text-xs text-slate-400 uppercase tracking-wider font-semibold"
+                    data-i18n="Case Studies">
+                    Case Studies
+                </div>
             </div>
 
             <div class="bg-cardBg/40 border border-slate-800/80 rounded-xl p-6 text-center">
                 <div class="text-3xl font-extrabold text-amber-500 mb-1">100%</div>
-                <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Open Source</div>
-            </div>
 
+                <div
+                    class="text-xs text-slate-400 uppercase tracking-wider font-semibold"
+                    data-i18n="Open Source">
+                    Open Source
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Skills & Tools -->
-    <section id="skills" aria-labelledby="skills-heading" class="max-w-5xl mx-auto px-4 py-12 border-t border-slate-800/50">
-        <h2 id="skills-heading" class="text-2xl font-bold mb-8 border-l-4 border-orange-500 pl-3">Skills & Tools</h2>
+    <section
+        id="skills"
+        aria-labelledby="skills-heading"
+        class="scroll-mt-24 max-w-5xl mx-auto px-4 py-12 border-t border-slate-800/50">
+
+        <h2
+            id="skills-heading"
+            class="text-2xl font-bold mb-8 border-l-4 border-orange-500 pl-3"
+            data-i18n="Skills & Tools">
+            Skills & Tools
+        </h2>
 
         <div class="flex flex-wrap gap-3">
-            <span class="bg-slate-800/80 border border-slate-700 text-slate-200 px-4 py-2 rounded-lg text-sm font-semibold hover:border-orange-500/50 transition">Excel</span>
-            <span class="bg-slate-800/80 border border-slate-700 text-slate-200 px-4 py-2 rounded-lg text-sm font-semibold hover:border-orange-500/50 transition">Python (Pandas, NumPy)</span>
-            <span class="bg-slate-800/80 border border-slate-700 text-slate-200 px-4 py-2 rounded-lg text-sm font-semibold hover:border-orange-500/50 transition">MSSQL</span>
-            <span class="bg-slate-800/80 border border-slate-700 text-slate-200 px-4 py-2 rounded-lg text-sm font-semibold hover:border-orange-500/50 transition">PowerBI</span>
+            <span class="bg-slate-800/80 border border-slate-700 text-slate-200 px-4 py-2 rounded-lg text-sm font-semibold hover:border-orange-500/50 transition">
+                Excel
+            </span>
+
+            <span class="bg-slate-800/80 border border-slate-700 text-slate-200 px-4 py-2 rounded-lg text-sm font-semibold hover:border-orange-500/50 transition">
+                Python (Pandas, NumPy)
+            </span>
+
+            <span class="bg-slate-800/80 border border-slate-700 text-slate-200 px-4 py-2 rounded-lg text-sm font-semibold hover:border-orange-500/50 transition">
+                MSSQL
+            </span>
+
+            <span class="bg-slate-800/80 border border-slate-700 text-slate-200 px-4 py-2 rounded-lg text-sm font-semibold hover:border-orange-500/50 transition">
+                PowerBI
+            </span>
         </div>
     </section>
 
     <!-- Projects -->
-    <main id="projects" aria-labelledby="projects-heading" class="max-w-5xl mx-auto px-4 py-12 border-t border-slate-800/50">
+    <main
+        id="projects"
+        aria-labelledby="projects-heading"
+        class="scroll-mt-24 max-w-5xl mx-auto px-4 py-12 border-t border-slate-800/50">
 
         <div class="flex flex-wrap items-center justify-between gap-4 mb-8">
-            <h2 id="projects-heading" class="text-2xl font-bold border-l-4 border-orange-500 pl-3">Project Hub</h2>
 
-            <div class="flex flex-wrap gap-2 bg-slate-900/80 p-1.5 rounded-xl border border-slate-800" role="tablist" aria-label="Project Categories">
+            <h2
+                id="projects-heading"
+                class="text-2xl font-bold border-l-4 border-orange-500 pl-3"
+                data-i18n="Project Hub">
+                Project Hub
+            </h2>
 
-                <button type="button" onclick="showCategory('youtube')" id="btn-youtube" role="tab" aria-selected="true" aria-controls="cat-youtube" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold bg-gradient-to-r from-orange-500 to-amber-500 text-slate-950 transition">
+            <div
+                class="flex flex-wrap gap-2 bg-slate-900/80 p-1.5 rounded-xl border border-slate-800"
+                role="tablist"
+                aria-label="Project Categories">
+
+                <button
+                    type="button"
+                    id="btn-youtube"
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="cat-youtube"
+                    class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold bg-gradient-to-r from-orange-500 to-amber-500 text-slate-950 transition"
+                    data-category="youtube"
+                    data-i18n="YouTube Videos">
                     YouTube Videos
                 </button>
 
-                <button type="button" onclick="showCategory('excel')" id="btn-excel" role="tab" aria-selected="false" aria-controls="cat-excel" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition">
+                <button
+                    type="button"
+                    id="btn-excel"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="cat-excel"
+                    class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition"
+                    data-category="excel"
+                    data-i18n="Excel">
                     Excel
                 </button>
 
-                <button type="button" onclick="showCategory('sql')" id="btn-sql" role="tab" aria-selected="false" aria-controls="cat-sql" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition">
+                <button
+                    type="button"
+                    id="btn-sql"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="cat-sql"
+                    class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition"
+                    data-category="sql"
+                    data-i18n="SQL">
                     SQL
                 </button>
 
-                <button type="button" onclick="showCategory('powerbi')" id="btn-powerbi" role="tab" aria-selected="false" aria-controls="cat-powerbi" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition">
+                <button
+                    type="button"
+                    id="btn-powerbi"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="cat-powerbi"
+                    class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition"
+                    data-category="powerbi"
+                    data-i18n="PowerBI">
                     PowerBI
                 </button>
 
-                <button type="button" onclick="showCategory('python')" id="btn-python" role="tab" aria-selected="false" aria-controls="cat-python" class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition">
+                <button
+                    type="button"
+                    id="btn-python"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="cat-python"
+                    class="tab-btn px-4 py-2 rounded-lg text-sm font-semibold text-slate-400 hover:text-white transition"
+                    data-category="python"
+                    data-i18n="Python">
                     Python
                 </button>
-
             </div>
         </div>
 
         <!-- YouTube -->
-        <div id="cat-youtube" role="tabpanel" aria-labelledby="btn-youtube" class="category-content relative">
+        <div
+            id="cat-youtube"
+            role="tabpanel"
+            aria-labelledby="btn-youtube"
+            class="category-content relative">
 
             <div class="bg-cardBg/40 border border-slate-800/80 border-dashed rounded-2xl p-12 text-center max-w-2xl mx-auto my-6">
 
@@ -195,99 +404,191 @@
                     🚀
                 </div>
 
-                <h3 class="text-xl font-bold mb-2 text-slate-100">
+                <h3
+                    class="text-xl font-bold mb-2 text-slate-100"
+                    data-i18n="End-to-End Projects Are on the Way">
                     End-to-End Projects Are on the Way
                 </h3>
 
-                <p class="text-sm text-slate-400 leading-relaxed mb-6">
+                <p
+                    class="text-sm text-slate-400 leading-relaxed mb-6"
+                    data-i18n="youtube-description">
                     I am currently engineering comprehensive, real-world data analytics case studies featuring end-to-end pipelines (Python ETL, MSSQL relational modeling, and PowerBI interactive reporting). Stay tuned!
                 </p>
 
-                <span class="inline-block bg-slate-800/80 border border-slate-700 text-slate-300 text-xs font-semibold px-4 py-2 rounded-lg">
+                <span
+                    class="inline-block bg-slate-800/80 border border-slate-700 text-slate-300 text-xs font-semibold px-4 py-2 rounded-lg"
+                    data-i18n="Coming Soon">
                     Coming Soon
                 </span>
-
             </div>
         </div>
 
         <!-- Excel -->
-        <div id="cat-excel" role="tabpanel" aria-labelledby="btn-excel" class="category-content hidden grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <div
+            id="cat-excel"
+            role="tabpanel"
+            aria-labelledby="btn-excel"
+            class="category-content hidden grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
 
             <!-- Excel Card 1 -->
             <article class="bg-cardBg border border-slate-800 rounded-2xl overflow-hidden shadow-xl p-6 flex flex-col justify-between">
 
                 <div>
                     <div class="flex items-center justify-between gap-2 mb-4">
-                        <span class="text-xs font-semibold tracking-wider text-emerald-400 uppercase">Excel Analysis</span>
-                        <span class="text-xs text-slate-400">Advanced Functions & Pivots</span>
+
+                        <span
+                            class="text-xs font-semibold tracking-wider text-emerald-400 uppercase"
+                            data-i18n="Excel Analysis">
+                            Excel Analysis
+                        </span>
+
+                        <span
+                            class="text-xs text-slate-400"
+                            data-i18n="Advanced Functions & Pivots">
+                            Advanced Functions & Pivots
+                        </span>
                     </div>
 
-                    <h3 class="text-xl font-bold mb-3">Retail Sales & Pivot Analysis</h3>
+                    <h3
+                        class="text-xl font-bold mb-3"
+                        data-i18n="Retail Sales & Pivot Analysis">
+                        Retail Sales & Pivot Analysis
+                    </h3>
 
                     <div class="mb-6">
-                        <input type="checkbox" id="read-more-1" class="read-more-check peer hidden" aria-hidden="true">
-
-                        <p class="text-sm text-slate-400 leading-relaxed line-clamp-3 peer-checked:line-clamp-none transition-all">
+                        <p
+                            class="description-text text-sm text-slate-400 leading-relaxed line-clamp-3"
+                            data-i18n="excel-description-1">
                             A comprehensive sales performance analysis workflow built in Excel. Utilized advanced aggregation functions (SUMIFS, COUNTIFS) for conditional KPI tracking, dynamic lookups (XLOOKUP) for data enrichment, and structured Pivot Table & Pivot Chart reports to uncover regional retail trends and margin drivers.
                         </p>
 
-                        <label for="read-more-1" class="inline-block text-slate-400 hover:text-white font-semibold text-xs cursor-pointer mt-1 border-b border-dashed border-slate-600 hover:border-white transition" aria-label="Toggle description text">
-                            <span class="read-more-btn">...Read more</span>
-                            <span class="show-less-btn hidden">Show less ↑</span>
-                        </label>
+                        <button
+                            type="button"
+                            class="read-more-btn text-slate-400 hover:text-white font-semibold text-xs cursor-pointer mt-1 border-b border-dashed border-slate-600 hover:border-white transition"
+                            aria-expanded="false"
+                            data-read-more="excel-description-1">
+                            <span data-i18n="...Read more">...Read more</span>
+                        </button>
                     </div>
                 </div>
 
                 <div>
                     <div class="relative group rounded-xl overflow-hidden border border-slate-700 bg-slate-950">
 
-                        <div id="excel-carousel-1" role="region" aria-label="Excel Sales Performance image gallery" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar h-64">
+                        <div
+                            id="excel-carousel-1"
+                            role="region"
+                            aria-label="Excel Sales Performance image gallery"
+                            class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar h-64">
 
                             <div class="snap-center shrink-0 w-full h-full relative">
                                 <span class="absolute top-2 left-2 bg-slate-900/90 text-xs px-2.5 py-1 rounded-md text-slate-300 font-semibold border border-slate-700/80 z-10">
-                                    1 / 3 - Raw Data & KPIs
+                                    1 / 3 - <span data-i18n="Raw Data & KPIs">Raw Data & KPIs</span>
                                 </span>
 
-                                <img onclick="openGalleryLightbox('excel-carousel-1', 0)" onkeydown="if(event.key==='Enter'||event.key===' ') openGalleryLightbox('excel-carousel-1', 0)" role="button" tabindex="0" class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300" src="https://i.ibb.co/8ZdKQ9g/questions.png" alt="Excel Questions Sheet" width="800" height="600" loading="lazy">
+                                <img
+                                    onclick="openGalleryLightbox('excel-carousel-1', 0)"
+                                    onkeydown="handleImageKeydown(event, 'excel-carousel-1', 0)"
+                                    role="button"
+                                    tabindex="0"
+                                    class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300"
+                                    src="https://i.ibb.co/8ZdKQ9g/questions.png"
+                                    alt="Excel Questions Sheet"
+                                    width="800"
+                                    height="600"
+                                    loading="lazy"
+                                    decoding="async">
                             </div>
 
                             <div class="snap-center shrink-0 w-full h-full relative">
                                 <span class="absolute top-2 left-2 bg-slate-900/90 text-xs px-2.5 py-1 rounded-md text-slate-300 font-semibold border border-slate-700/80 z-10">
-                                    2 / 3 - Pivot Dashboard
+                                    2 / 3 - <span data-i18n="Pivot Dashboard">Pivot Dashboard</span>
                                 </span>
 
-                                <img onclick="openGalleryLightbox('excel-carousel-1', 1)" onkeydown="if(event.key==='Enter'||event.key===' ') openGalleryLightbox('excel-carousel-1', 1)" role="button" tabindex="0" class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300" src="https://i.ibb.co/jkwJtN1L/pivot.png" alt="Excel Pivot Analysis Sheet" width="800" height="600" loading="lazy">
+                                <img
+                                    onclick="openGalleryLightbox('excel-carousel-1', 1)"
+                                    onkeydown="handleImageKeydown(event, 'excel-carousel-1', 1)"
+                                    role="button"
+                                    tabindex="0"
+                                    class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300"
+                                    src="https://i.ibb.co/jkwJtN1L/pivot.png"
+                                    alt="Excel Pivot Analysis Sheet"
+                                    width="800"
+                                    height="600"
+                                    loading="lazy"
+                                    decoding="async">
                             </div>
 
                             <div class="snap-center shrink-0 w-full h-full relative">
                                 <span class="absolute top-2 left-2 bg-slate-900/90 text-xs px-2.5 py-1 rounded-md text-slate-300 font-semibold border border-slate-700/80 z-10">
-                                    3 / 3 - Advanced Formulas
+                                    3 / 3 - <span data-i18n="Advanced Formulas">Advanced Formulas</span>
                                 </span>
 
-                                <img onclick="openGalleryLightbox('excel-carousel-1', 2)" onkeydown="if(event.key==='Enter'||event.key===' ') openGalleryLightbox('excel-carousel-1', 2)" role="button" tabindex="0" class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300" src="https://i.ibb.co/PGTS6sSW/text.png" alt="Excel Formulas Sheet" width="800" height="600" loading="lazy">
+                                <img
+                                    onclick="openGalleryLightbox('excel-carousel-1', 2)"
+                                    onkeydown="handleImageKeydown(event, 'excel-carousel-1', 2)"
+                                    role="button"
+                                    tabindex="0"
+                                    class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300"
+                                    src="https://i.ibb.co/PGTS6sSW/text.png"
+                                    alt="Excel Formulas Sheet"
+                                    width="800"
+                                    height="600"
+                                    loading="lazy"
+                                    decoding="async">
                             </div>
-
                         </div>
 
-                        <button type="button" onclick="scrollCarousel('excel-carousel-1', -1)" aria-label="Previous slide" class="absolute left-2 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-2 rounded-full border border-slate-700 shadow-lg transition z-10">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/>
+                        <button
+                            type="button"
+                            onclick="scrollCarousel('excel-carousel-1', -1)"
+                            aria-label="Previous slide"
+                            class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-2 rounded-full border border-slate-700 shadow-lg transition z-10">
+
+                            <svg
+                                class="w-5 h-5"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true">
+
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2.5"
+                                    d="M15 19l-7-7 7-7"/>
                             </svg>
                         </button>
 
-                        <button type="button" onclick="scrollCarousel('excel-carousel-1', 1)" aria-label="Next slide" class="absolute right-2 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-2 rounded-full border border-slate-700/80 transition z-10">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+                        <button
+                            type="button"
+                            onclick="scrollCarousel('excel-carousel-1', 1)"
+                            aria-label="Next slide"
+                            class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-2 rounded-full border border-slate-700/80 transition z-10">
+
+                            <svg
+                                class="w-5 h-5"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true">
+
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2.5"
+                                    d="M9 5l7 7-7 7"/>
                             </svg>
                         </button>
-
                     </div>
 
-                    <p class="text-xs text-slate-500 mt-3 text-center">
+                    <p
+                        class="text-xs text-slate-500 mt-3 text-center"
+                        data-i18n="image-help">
                         💡 Click on images to view full size in high resolution.
                     </p>
                 </div>
-
             </article>
 
             <!-- Excel Card 2 -->
@@ -295,320 +596,638 @@
 
                 <div>
                     <div class="flex items-center justify-between gap-2 mb-4">
-                        <span class="text-xs font-semibold tracking-wider text-emerald-400 uppercase">Excel Analysis</span>
-                        <span class="text-xs text-slate-400">Advanced Formulas & Logic</span>
+
+                        <span
+                            class="text-xs font-semibold tracking-wider text-emerald-400 uppercase"
+                            data-i18n="Excel Analysis">
+                            Excel Analysis
+                        </span>
+
+                        <span
+                            class="text-xs text-slate-400"
+                            data-i18n="Advanced Formulas & Logic">
+                            Advanced Formulas & Logic
+                        </span>
                     </div>
 
-                    <h3 class="text-xl font-bold mb-3">Sales Metrics</h3>
+                    <h3
+                        class="text-xl font-bold mb-3"
+                        data-i18n="Sales Metrics">
+                        Sales Metrics
+                    </h3>
 
                     <div class="mb-6">
-                        <input type="checkbox" id="read-more-2" class="read-more-check peer hidden" aria-hidden="true">
-
-                        <p class="text-sm text-slate-400 leading-relaxed line-clamp-3 peer-checked:line-clamp-none transition-all">
+                        <p
+                            class="description-text text-sm text-slate-400 leading-relaxed line-clamp-3"
+                            data-i18n="excel-description-2">
                             Designed an automated sales metric framework using nested logical functions and multi-criteria lookup workflows. Implemented AVERAGEIFS for segment benchmarks, MAX/MIN for outlier detection, and dynamic array formulas (UNIQUE, FILTER) for automated categorical data extraction.
                         </p>
 
-                        <label for="read-more-2" class="inline-block text-slate-400 hover:text-white font-semibold text-xs cursor-pointer mt-1 border-b border-dashed border-slate-600 hover:border-white transition" aria-label="Toggle description text">
-                            <span class="read-more-btn">...Read more</span>
-                            <span class="show-less-btn hidden">Show less ↑</span>
-                        </label>
+                        <button
+                            type="button"
+                            class="read-more-btn text-slate-400 hover:text-white font-semibold text-xs cursor-pointer mt-1 border-b border-dashed border-slate-600 hover:border-white transition"
+                            aria-expanded="false"
+                            data-read-more="excel-description-2">
+                            <span data-i18n="...Read more">...Read more</span>
+                        </button>
                     </div>
                 </div>
 
                 <div>
                     <div class="relative group rounded-xl overflow-hidden border border-slate-700 bg-slate-950">
 
-                        <div id="excel-carousel-2" role="region" aria-label="Excel Formulas Workflow image gallery" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar h-64">
+                        <div
+                            id="excel-carousel-2"
+                            role="region"
+                            aria-label="Excel Formulas Workflow image gallery"
+                            class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar h-64">
 
                             <div class="snap-center shrink-0 w-full h-full relative">
                                 <span class="absolute top-2 left-2 bg-slate-900/90 text-xs px-2.5 py-1 rounded-md text-slate-300 font-semibold border border-slate-700/80 z-10">
-                                    1 / 2 - Metrics & Summary
+                                    1 / 2 - <span data-i18n="Metrics & Summary">Metrics & Summary</span>
                                 </span>
 
-                                <img onclick="openGalleryLightbox('excel-carousel-2', 0)" onkeydown="if(event.key==='Enter'||event.key===' ') openGalleryLightbox('excel-carousel-2', 0)" role="button" tabindex="0" class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300" src="https://i.ibb.co/tTptKLJW/questions.png" alt="Excel Questions Sheet" width="800" height="600" loading="lazy">
+                                <img
+                                    onclick="openGalleryLightbox('excel-carousel-2', 0)"
+                                    onkeydown="handleImageKeydown(event, 'excel-carousel-2', 0)"
+                                    role="button"
+                                    tabindex="0"
+                                    class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300"
+                                    src="https://i.ibb.co/tTptKLJW/questions.png"
+                                    alt="Excel Questions Sheet"
+                                    width="800"
+                                    height="600"
+                                    loading="lazy"
+                                    decoding="async">
                             </div>
 
                             <div class="snap-center shrink-0 w-full h-full relative">
                                 <span class="absolute top-2 left-2 bg-slate-900/90 text-xs px-2.5 py-1 rounded-md text-slate-300 font-semibold border border-slate-700/80 z-10">
-                                    2 / 2 - Formula Breakdown
+                                    2 / 2 - <span data-i18n="Formula Breakdown">Formula Breakdown</span>
                                 </span>
 
-                                <img onclick="openGalleryLightbox('excel-carousel-2', 1)" onkeydown="if(event.key==='Enter'||event.key===' ') openGalleryLightbox('excel-carousel-2', 1)" role="button" tabindex="0" class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300" src="https://i.ibb.co/Kp7jpTL4/formulas.png" alt="Excel Formulas Breakdown Sheet" width="800" height="600" loading="lazy">
+                                <img
+                                    onclick="openGalleryLightbox('excel-carousel-2', 1)"
+                                    onkeydown="handleImageKeydown(event, 'excel-carousel-2', 1)"
+                                    role="button"
+                                    tabindex="0"
+                                    class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300"
+                                    src="https://i.ibb.co/Kp7jpTL4/formulas.png"
+                                    alt="Excel Formulas Breakdown Sheet"
+                                    width="800"
+                                    height="600"
+                                    loading="lazy"
+                                    decoding="async">
                             </div>
-
                         </div>
 
-                        <button type="button" onclick="scrollCarousel('excel-carousel-2', -1)" aria-label="Previous slide" class="absolute left-2 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-2 rounded-full border border-slate-700 shadow-lg transition z-10">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/>
+                        <button
+                            type="button"
+                            onclick="scrollCarousel('excel-carousel-2', -1)"
+                            aria-label="Previous slide"
+                            class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-2 rounded-full border border-slate-700 shadow-lg transition z-10">
+
+                            <svg
+                                class="w-5 h-5"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true">
+
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2.5"
+                                    d="M15 19l-7-7 7-7"/>
                             </svg>
                         </button>
 
-                        <button type="button" onclick="scrollCarousel('excel-carousel-2', 1)" aria-label="Next slide" class="absolute right-2 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-2 rounded-full border border-slate-700/80 transition z-10">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+                        <button
+                            type="button"
+                            onclick="scrollCarousel('excel-carousel-2', 1)"
+                            aria-label="Next slide"
+                            class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-2 rounded-full border border-slate-700/80 transition z-10">
+
+                            <svg
+                                class="w-5 h-5"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true">
+
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2.5"
+                                    d="M9 5l7 7-7 7"/>
                             </svg>
                         </button>
-
                     </div>
 
-                    <p class="text-xs text-slate-500 mt-3 text-center">
+                    <p
+                        class="text-xs text-slate-500 mt-3 text-center"
+                        data-i18n="image-help">
                         💡 Click on images to view full size in high resolution.
                     </p>
                 </div>
-
             </article>
-
         </div>
 
         <!-- SQL -->
-        <div id="cat-sql" role="tabpanel" aria-labelledby="btn-sql" class="category-content hidden grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <div
+            id="cat-sql"
+            role="tabpanel"
+            aria-labelledby="btn-sql"
+            class="category-content hidden grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
 
             <article class="bg-cardBg border border-slate-800 rounded-2xl overflow-hidden shadow-xl p-6 flex flex-col justify-between">
 
                 <div>
                     <div class="flex items-center justify-between gap-2 mb-4">
-                        <span class="text-xs font-semibold tracking-wider text-cyan-400 uppercase">SQL Analysis</span>
-                        <span class="text-xs text-slate-400">JOINs, GROUP BY & Subqueries</span>
+
+                        <span
+                            class="text-xs font-semibold tracking-wider text-cyan-400 uppercase"
+                            data-i18n="SQL Analysis">
+                            SQL Analysis
+                        </span>
+
+                        <span
+                            class="text-xs text-slate-400"
+                            data-i18n="JOINs, GROUP BY & Subqueries">
+                            JOINs, GROUP BY & Subqueries
+                        </span>
                     </div>
 
-                    <h3 class="text-xl font-bold mb-3">Northwind SQL Analysis</h3>
+                    <h3
+                        class="text-xl font-bold mb-3"
+                        data-i18n="Northwind SQL Analysis">
+                        Northwind SQL Analysis
+                    </h3>
 
                     <div class="mb-6">
-                        <input type="checkbox" id="read-more-sql-1" class="read-more-check peer hidden" aria-hidden="true">
-
-                        <p class="text-sm text-slate-400 leading-relaxed line-clamp-3 peer-checked:line-clamp-none transition-all">
+                        <p
+                            class="description-text text-sm text-slate-400 leading-relaxed line-clamp-3"
+                            data-i18n="sql-description">
                             A SQL analysis project using the Northwind database to practice relational data analysis and aggregation techniques. The analysis covered multi-table INNER JOINs, GROUP BY and HAVING for country-level sales and customer analysis, as well as subqueries to identify orders with above-average freight values. The project focused on extracting meaningful business insights from related customer, order, and order detail tables.
                         </p>
 
-                        <label for="read-more-sql-1" class="inline-block text-slate-400 hover:text-white font-semibold text-xs cursor-pointer mt-1 border-b border-dashed border-slate-600 hover:border-white transition" aria-label="Toggle description text">
-                            <span class="read-more-btn">...Read more</span>
-                            <span class="show-less-btn hidden">Show less ↑</span>
-                        </label>
+                        <button
+                            type="button"
+                            class="read-more-btn text-slate-400 hover:text-white font-semibold text-xs cursor-pointer mt-1 border-b border-dashed border-slate-600 hover:border-white transition"
+                            aria-expanded="false"
+                            data-read-more="sql-description">
+                            <span data-i18n="...Read more">...Read more</span>
+                        </button>
                     </div>
                 </div>
 
                 <div>
                     <div class="relative group rounded-xl overflow-hidden border border-slate-700 bg-slate-950">
 
-                        <div id="sql-carousel-1" role="region" aria-label="Northwind SQL Analysis query gallery" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar h-64">
+                        <div
+                            id="sql-carousel-1"
+                            role="region"
+                            aria-label="Northwind SQL Analysis query gallery"
+                            class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar h-64">
 
                             <div class="snap-center shrink-0 w-full h-full relative">
                                 <span class="absolute top-2 left-2 bg-slate-900/90 text-xs px-2.5 py-1 rounded-md text-slate-300 font-semibold border border-slate-700/80 z-10">
-                                    1 / 3 - Country Sales Analysis
+                                    1 / 3 - <span data-i18n="Country Sales Analysis">Country Sales Analysis</span>
                                 </span>
 
-                                <img onclick="openGalleryLightbox('sql-carousel-1', 0)" onkeydown="if(event.key==='Enter'||event.key===' ') openGalleryLightbox('sql-carousel-1', 0)" role="button" tabindex="0" class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300" src="https://i.ibb.co/JRkZMk8v/p1.png" alt="Northwind SQL country sales and customer analysis query" width="800" height="600" loading="lazy">
+                                <img
+                                    onclick="openGalleryLightbox('sql-carousel-1', 0)"
+                                    onkeydown="handleImageKeydown(event, 'sql-carousel-1', 0)"
+                                    role="button"
+                                    tabindex="0"
+                                    class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300"
+                                    src="https://i.ibb.co/JRkZMk8v/p1.png"
+                                    alt="Northwind SQL country sales and customer analysis query"
+                                    width="800"
+                                    height="600"
+                                    loading="lazy"
+                                    decoding="async">
                             </div>
 
                             <div class="snap-center shrink-0 w-full h-full relative">
                                 <span class="absolute top-2 left-2 bg-slate-900/90 text-xs px-2.5 py-1 rounded-md text-slate-300 font-semibold border border-slate-700/80 z-10">
-                                    2 / 3 - Customer Order Analysis
+                                    2 / 3 - <span data-i18n="Customer Order Analysis">Customer Order Analysis</span>
                                 </span>
 
-                                <img onclick="openGalleryLightbox('sql-carousel-1', 1)" onkeydown="if(event.key==='Enter'||event.key===' ') openGalleryLightbox('sql-carousel-1', 1)" role="button" tabindex="0" class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300" src="https://i.ibb.co/0jRbKrpN/p2.png" alt="Northwind SQL customer order count and total sales query" width="800" height="600" loading="lazy">
+                                <img
+                                    onclick="openGalleryLightbox('sql-carousel-1', 1)"
+                                    onkeydown="handleImageKeydown(event, 'sql-carousel-1', 1)"
+                                    role="button"
+                                    tabindex="0"
+                                    class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300"
+                                    src="https://i.ibb.co/0jRbKrpN/p2.png"
+                                    alt="Northwind SQL customer order count and total sales query"
+                                    width="800"
+                                    height="600"
+                                    loading="lazy"
+                                    decoding="async">
                             </div>
 
                             <div class="snap-center shrink-0 w-full h-full relative">
                                 <span class="absolute top-2 left-2 bg-slate-900/90 text-xs px-2.5 py-1 rounded-md text-slate-300 font-semibold border border-slate-700/80 z-10">
-                                    3 / 3 - Freight Subquery Analysis
+                                    3 / 3 - <span data-i18n="Freight Subquery Analysis">Freight Subquery Analysis</span>
                                 </span>
 
-                                <img onclick="openGalleryLightbox('sql-carousel-1', 2)" onkeydown="if(event.key==='Enter'||event.key===' ') openGalleryLightbox('sql-carousel-1', 2)" role="button" tabindex="0" class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300" src="https://i.ibb.co/LDs26Y9X/p3.png" alt="Northwind SQL above-average freight subquery" width="800" height="600" loading="lazy">
+                                <img
+                                    onclick="openGalleryLightbox('sql-carousel-1', 2)"
+                                    onkeydown="handleImageKeydown(event, 'sql-carousel-1', 2)"
+                                    role="button"
+                                    tabindex="0"
+                                    class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300"
+                                    src="https://i.ibb.co/LDs26Y9X/p3.png"
+                                    alt="Northwind SQL above-average freight subquery"
+                                    width="800"
+                                    height="600"
+                                    loading="lazy"
+                                    decoding="async">
                             </div>
-
                         </div>
 
-                        <button type="button" onclick="scrollCarousel('sql-carousel-1', -1)" aria-label="Previous slide" class="absolute left-2 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-2 rounded-full border border-slate-700 shadow-lg transition z-10">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/>
+                        <button
+                            type="button"
+                            onclick="scrollCarousel('sql-carousel-1', -1)"
+                            aria-label="Previous slide"
+                            class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-2 rounded-full border border-slate-700 shadow-lg transition z-10">
+
+                            <svg
+                                class="w-5 h-5"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true">
+
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2.5"
+                                    d="M15 19l-7-7 7-7"/>
                             </svg>
                         </button>
 
-                        <button type="button" onclick="scrollCarousel('sql-carousel-1', 1)" aria-label="Next slide" class="absolute right-2 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-2 rounded-full border border-slate-700/80 transition z-10">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+                        <button
+                            type="button"
+                            onclick="scrollCarousel('sql-carousel-1', 1)"
+                            aria-label="Next slide"
+                            class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-2 rounded-full border border-slate-700/80 transition z-10">
+
+                            <svg
+                                class="w-5 h-5"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true">
+
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2.5"
+                                    d="M9 5l7 7-7 7"/>
                             </svg>
                         </button>
-
                     </div>
 
-                    <p class="text-xs text-slate-500 mt-3 text-center">
+                    <p
+                        class="text-xs text-slate-500 mt-3 text-center"
+                        data-i18n="image-help">
                         💡 Click on images to view full size in high resolution.
                     </p>
                 </div>
-
             </article>
         </div>
 
         <!-- Power BI -->
-        <div id="cat-powerbi" role="tabpanel" aria-labelledby="btn-powerbi" class="category-content hidden grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <div
+            id="cat-powerbi"
+            role="tabpanel"
+            aria-labelledby="btn-powerbi"
+            class="category-content hidden grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
 
             <article class="bg-cardBg border border-slate-800 rounded-2xl overflow-hidden shadow-xl p-6 flex flex-col justify-between">
 
                 <div>
                     <div class="flex items-center justify-between gap-2 mb-4">
-                        <span class="text-xs font-semibold tracking-wider text-amber-500 uppercase">Power BI Dashboard</span>
+
+                        <span
+                            class="text-xs font-semibold tracking-wider text-amber-500 uppercase"
+                            data-i18n="Power BI Dashboard">
+                            Power BI Dashboard
+                        </span>
                     </div>
 
-                    <h3 class="text-xl font-bold mb-3">Interactive BI Dashboard</h3>
+                    <h3
+                        class="text-xl font-bold mb-3"
+                        data-i18n="Interactive BI Dashboard">
+                        Interactive BI Dashboard
+                    </h3>
 
                     <div class="mb-6">
-                        <input type="checkbox" id="read-more-powerbi" class="read-more-check peer hidden" aria-hidden="true">
-
-                        <p class="text-sm text-slate-400 leading-relaxed line-clamp-3 peer-checked:line-clamp-none transition-all">
+                        <p
+                            class="description-text text-sm text-slate-400 leading-relaxed line-clamp-3"
+                            data-i18n="powerbi-description">
                             Designed and deployed an interactive business intelligence dashboard in Power BI. Structured the relational data model using clean source tables and built cross-filtered visual analytics to track key performance indicators. You can check out the interactive video walkthrough by clicking the second slide to watch it on YouTube.
                         </p>
 
-                        <label for="read-more-powerbi" class="inline-block text-slate-400 hover:text-white font-semibold text-xs cursor-pointer mt-1 border-b border-dashed border-slate-600 hover:border-white transition" aria-label="Toggle description text">
-                            <span class="read-more-btn">...Read more</span>
-                            <span class="show-less-btn hidden">Show less ↑</span>
-                        </label>
+                        <button
+                            type="button"
+                            class="read-more-btn text-slate-400 hover:text-white font-semibold text-xs cursor-pointer mt-1 border-b border-dashed border-slate-600 hover:border-white transition"
+                            aria-expanded="false"
+                            data-read-more="powerbi-description">
+                            <span data-i18n="...Read more">...Read more</span>
+                        </button>
                     </div>
                 </div>
 
                 <div>
                     <div class="relative group rounded-xl overflow-hidden border border-slate-700 bg-slate-950">
 
-                        <div id="powerbi-carousel-1" role="region" aria-label="Power BI Dashboard interactive gallery" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar h-64">
+                        <div
+                            id="powerbi-carousel-1"
+                            role="region"
+                            aria-label="Power BI Dashboard interactive gallery"
+                            class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar h-64">
 
                             <div class="snap-center shrink-0 w-full h-full relative">
                                 <span class="absolute top-2 left-2 bg-slate-900/90 text-xs px-2.5 py-1 rounded-md text-slate-300 font-semibold border border-slate-700/80 z-10">
-                                    1 / 2 - Dashboard Preview
+                                    1 / 2 - <span data-i18n="Dashboard Preview">Dashboard Preview</span>
                                 </span>
 
-                                <img onclick="openGalleryLightbox('powerbi-carousel-1', 0)" onkeydown="if(event.key==='Enter'||event.key===' ') openGalleryLightbox('powerbi-carousel-1', 0)" role="button" tabindex="0" class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300" src="https://i.ibb.co/LzfCTjwB/dashboard-gorsel.png" alt="Power BI Dashboard Overview" width="800" height="600" loading="lazy">
+                                <img
+                                    onclick="openGalleryLightbox('powerbi-carousel-1', 0)"
+                                    onkeydown="handleImageKeydown(event, 'powerbi-carousel-1', 0)"
+                                    role="button"
+                                    tabindex="0"
+                                    class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300"
+                                    src="https://i.ibb.co/LzfCTjwB/dashboard-gorsel.png"
+                                    alt="Power BI Dashboard Overview"
+                                    width="800"
+                                    height="600"
+                                    loading="lazy"
+                                    decoding="async">
                             </div>
 
                             <div class="snap-center shrink-0 w-full h-full relative">
-                                <span class="absolute top-2 left-2 bg-slate-900/90 text-xs px-2.5 py-1 rounded-md text-slate-300 font-semibold border border-slate-700/80 z-10">
 
-                                    2 / 2 - Video Walkthrough
+                                <span class="absolute top-2 left-2 bg-slate-900/90 text-xs px-2.5 py-1 rounded-md text-slate-300 font-semibold border border-slate-700/80 z-10">
+                                    2 / 2 - <span data-i18n="Video Walkthrough">Video Walkthrough</span>
                                 </span>
 
-                                <a href="https://www.youtube.com/watch?v=YSi-75MwVoo" target="_blank" rel="noopener noreferrer" class="block w-full h-full relative group/vid cursor-pointer">
+                                <a
+                                    href="https://www.youtube.com/watch?v=YSi-75MwVoo"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    class="block w-full h-full relative group/vid cursor-pointer"
+                                    aria-label="Watch Power BI video walkthrough">
 
-                                    <img class="w-full h-full object-cover object-top group-hover/vid:scale-105 transition duration-300 opacity-80 group-hover/vid:opacity-100" src="https://i.ibb.co/LzfCTjwB/dashboard-gorsel.png" alt="Video Walkthrough Preview" width="800" height="600" loading="lazy">
+                                    <img
+                                        class="w-full h-full object-cover object-top group-hover/vid:scale-105 transition duration-300 opacity-80 group-hover/vid:opacity-100"
+                                        src="https://i.ibb.co/LzfCTjwB/dashboard-gorsel.png"
+                                        alt="Video Walkthrough Preview"
+                                        width="800"
+                                        height="600"
+                                        loading="lazy"
+                                        decoding="async">
 
                                     <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+
                                         <div class="w-14 h-14 bg-orange-600 group-hover/vid:bg-orange-500 rounded-full flex items-center justify-center shadow-lg transform group-hover/vid:scale-110 transition duration-300">
-                                            <svg class="w-6 h-6 fill-white ml-1" viewBox="0 0 24 24" aria-hidden="true">
+
+                                            <svg
+                                                class="w-6 h-6 fill-white ml-1"
+                                                viewBox="0 0 24 24"
+                                                aria-hidden="true">
+
                                                 <path d="M8 5v14l11-7z"/>
                                             </svg>
                                         </div>
                                     </div>
-
                                 </a>
                             </div>
-
                         </div>
 
-                        <button type="button" onclick="scrollCarousel('powerbi-carousel-1', -1)" aria-label="Previous slide" class="absolute left-2 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-2 rounded-full border border-slate-700 shadow-lg transition z-10">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/>
+                        <button
+                            type="button"
+                            onclick="scrollCarousel('powerbi-carousel-1', -1)"
+                            aria-label="Previous slide"
+                            class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-2 rounded-full border border-slate-700 shadow-lg transition z-10">
+
+                            <svg
+                                class="w-5 h-5"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true">
+
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2.5"
+                                    d="M15 19l-7-7 7-7"/>
                             </svg>
                         </button>
 
-                        <button type="button" onclick="scrollCarousel('powerbi-carousel-1', 1)" aria-label="Next slide" class="absolute right-2 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-2 rounded-full border border-slate-700/80 transition z-10">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+                        <button
+                            type="button"
+                            onclick="scrollCarousel('powerbi-carousel-1', 1)"
+                            aria-label="Next slide"
+                            class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-2 rounded-full border border-slate-700/80 transition z-10">
+
+                            <svg
+                                class="w-5 h-5"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true">
+
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2.5"
+                                    d="M9 5l7 7-7 7"/>
                             </svg>
                         </button>
-
                     </div>
 
-                    <p class="text-xs text-slate-500 mt-3 text-center">
+                    <p
+                        class="text-xs text-slate-500 mt-3 text-center"
+                        data-i18n="powerbi-help">
                         💡 Click arrows to switch between dashboard preview and video guide.
                     </p>
                 </div>
-
             </article>
         </div>
 
         <!-- Python -->
-        <div id="cat-python" role="tabpanel" aria-labelledby="btn-python" class="category-content hidden grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+        <div
+            id="cat-python"
+            role="tabpanel"
+            aria-labelledby="btn-python"
+            class="category-content hidden grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
 
             <article class="bg-cardBg border border-slate-800 rounded-2xl overflow-hidden shadow-xl p-6 flex flex-col justify-between">
 
                 <div>
                     <div class="flex items-center justify-between gap-2 mb-4">
-                        <span class="text-xs font-semibold tracking-wider text-blue-400 uppercase">Python Data Analysis</span>
-                        <span class="text-xs text-slate-400">Pandas & NumPy</span>
+
+                        <span
+                            class="text-xs font-semibold tracking-wider text-blue-400 uppercase"
+                            data-i18n="Python Data Analysis">
+                            Python Data Analysis
+                        </span>
+
+                        <span
+                            class="text-xs text-slate-400"
+                            data-i18n="Pandas & NumPy">
+                            Pandas & NumPy
+                        </span>
                     </div>
 
-                    <h3 class="text-xl font-bold mb-3">DataCo Supply Chain Analysis</h3>
+                    <h3
+                        class="text-xl font-bold mb-3"
+                        data-i18n="DataCo Supply Chain Analysis">
+                        DataCo Supply Chain Analysis
+                    </h3>
 
                     <div class="mb-6">
-                        <input type="checkbox" id="read-more-python-1" class="read-more-check peer hidden" aria-hidden="true">
-
-                        <p class="text-sm text-slate-400 leading-relaxed line-clamp-3 peer-checked:line-clamp-none transition-all">
+                        <p
+                            class="description-text text-sm text-slate-400 leading-relaxed line-clamp-3"
+                            data-i18n="python-description">
                             A data cleaning and exploratory analysis project based on a supply chain dataset containing 180,519 rows and 53 columns. The workflow covered dataset inspection, missing-value handling, data-type validation, and data preparation before analysis. Key business metrics were then calculated across sales, delivery performance, markets, and product categories. The analysis generated $36.78M in total sales, a $203.77 average sales value, and a 54.70% late delivery rate, with Europe identified as the top-performing market and Fishing as the leading product category.
                         </p>
 
-                        <label for="read-more-python-1" class="inline-block text-slate-400 hover:text-white font-semibold text-xs cursor-pointer mt-1 border-b border-dashed border-slate-600 hover:border-white transition" aria-label="Toggle description text">
-                            <span class="read-more-btn">...Read more</span>
-                            <span class="show-less-btn hidden">Show less ↑</span>
-                        </label>
+                        <button
+                            type="button"
+                            class="read-more-btn text-slate-400 hover:text-white font-semibold text-xs cursor-pointer mt-1 border-b border-dashed border-slate-600 hover:border-white transition"
+                            aria-expanded="false"
+                            data-read-more="python-description">
+                            <span data-i18n="...Read more">...Read more</span>
+                        </button>
                     </div>
                 </div>
 
                 <div>
                     <div class="relative group rounded-xl overflow-hidden border border-slate-700 bg-slate-950">
 
-                        <div id="python-carousel-1" role="region" aria-label="Python Data Analysis code gallery" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar h-64">
+                        <div
+                            id="python-carousel-1"
+                            role="region"
+                            aria-label="Python Data Analysis code gallery"
+                            class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar h-64">
 
                             <div class="snap-center shrink-0 w-full h-full relative">
                                 <span class="absolute top-2 left-2 bg-slate-900/90 text-xs px-2.5 py-1 rounded-md text-slate-300 font-semibold border border-slate-700/80 z-10">
-                                    1 / 2 - Data Cleaning & Preparation
+                                    1 / 2 - <span data-i18n="Data Cleaning & Preparation">Data Cleaning & Preparation</span>
                                 </span>
 
-                                <img onclick="openGalleryLightbox('python-carousel-1', 0)" onkeydown="if(event.key==='Enter'||event.key===' ') openGalleryLightbox('python-carousel-1', 0)" role="button" tabindex="0" class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300" src="https://i.ibb.co/5hKcChGV/pyt1.png" alt="Python DataCo Supply Chain data cleaning and preparation code" width="800" height="600" loading="lazy">
+                                <img
+                                    onclick="openGalleryLightbox('python-carousel-1', 0)"
+                                    onkeydown="handleImageKeydown(event, 'python-carousel-1', 0)"
+                                    role="button"
+                                    tabindex="0"
+                                    class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300"
+                                    src="https://i.ibb.co/5hKcChGV/pyt1.png"
+                                    alt="Python DataCo Supply Chain data cleaning and preparation code"
+                                    width="800"
+                                    height="600"
+                                    loading="lazy"
+                                    decoding="async">
                             </div>
 
                             <div class="snap-center shrink-0 w-full h-full relative">
                                 <span class="absolute top-2 left-2 bg-slate-900/90 text-xs px-2.5 py-1 rounded-md text-slate-300 font-semibold border border-slate-700/80 z-10">
-                                    2 / 2 - Sales & Delivery Analysis
+                                    2 / 2 - <span data-i18n="Sales & Delivery Analysis">Sales & Delivery Analysis</span>
                                 </span>
 
-                                <img onclick="openGalleryLightbox('python-carousel-1', 1)" onkeydown="if(event.key==='Enter'||event.key===' ') openGalleryLightbox('python-carousel-1', 1)" role="button" tabindex="0" class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300" src="https://i.ibb.co/mVXTkLvV/pyt2.png" alt="Python DataCo Supply Chain sales and delivery analysis code" width="800" height="600" loading="lazy">
+                                <img
+                                    onclick="openGalleryLightbox('python-carousel-1', 1)"
+                                    onkeydown="handleImageKeydown(event, 'python-carousel-1', 1)"
+                                    role="button"
+                                    tabindex="0"
+                                    class="w-full h-full object-cover object-top cursor-zoom-in hover:scale-105 transition duration-300"
+                                    src="https://i.ibb.co/mVXTkLvV/pyt2.png"
+                                    alt="Python DataCo Supply Chain sales and delivery analysis code"
+                                    width="800"
+                                    height="600"
+                                    loading="lazy"
+                                    decoding="async">
                             </div>
-
                         </div>
 
-                        <button type="button" onclick="scrollCarousel('python-carousel-1', -1)" aria-label="Previous slide" class="absolute left-2 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-2 rounded-full border border-slate-700 shadow-lg transition z-10">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/>
+                        <button
+                            type="button"
+                            onclick="scrollCarousel('python-carousel-1', -1)"
+                            aria-label="Previous slide"
+                            class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-2 rounded-full border border-slate-700 shadow-lg transition z-10">
+
+                            <svg
+                                class="w-5 h-5"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true">
+
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2.5"
+                                    d="M15 19l-7-7 7-7"/>
                             </svg>
                         </button>
 
-                        <button type="button" onclick="scrollCarousel('python-carousel-1', 1)" aria-label="Next slide" class="absolute right-2 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-2 rounded-full border border-slate-700/80 transition z-10">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+                        <button
+                            type="button"
+                            onclick="scrollCarousel('python-carousel-1', 1)"
+                            aria-label="Next slide"
+                            class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-2 rounded-full border border-slate-700/80 transition z-10">
+
+                            <svg
+                                class="w-5 h-5"
+                                fill="none"
+                                stroke="currentColor"
+                                viewBox="0 0 24 24"
+                                aria-hidden="true">
+
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2.5"
+                                    d="M9 5l7 7-7 7"/>
                             </svg>
                         </button>
-
                     </div>
 
-                    <p class="text-xs text-slate-500 mt-3 text-center">
+                    <p
+                        class="text-xs text-slate-500 mt-3 text-center"
+                        data-i18n="image-help">
                         💡 Click on images to view full size in high resolution.
                     </p>
                 </div>
-
             </article>
         </div>
-
     </main>
 
-    <!-- About & Contact Section -->
-    <section id="about" aria-labelledby="about-heading" class="bg-slate-900 border-t border-slate-800 py-16 transition-colors duration-300">
+    <!-- About & Contact -->
+    <section
+        id="about"
+        aria-labelledby="about-heading"
+        class="scroll-mt-24 bg-slate-900 border-t border-slate-800 py-16 transition-colors duration-300">
 
         <div class="max-w-4xl mx-auto px-4 text-center">
 
-            <h2 id="about-heading" class="text-2xl font-bold mb-4">
+            <h2
+                id="about-heading"
+                class="text-2xl font-bold mb-4"
+                data-i18n="About Me">
                 About Me
             </h2>
 
-            <p class="text-slate-400 max-w-xl mx-auto mb-8 text-sm leading-relaxed">
+            <p
+                class="text-slate-400 max-w-xl mx-auto mb-8 text-sm leading-relaxed"
+                data-i18n="about-description">
                 Hi, I'm Arda. I design and build end-to-end data analysis workflows using Excel, SQL, Python, and PowerBI. This portfolio hub showcases my practical projects and technical case studies built to solve real-world business problems.
                 <br><br>
                 Open to entry-level data analyst positions, internships, and project collaborations.
@@ -616,39 +1235,60 @@
 
             <div class="bg-darkBg/60 border border-slate-800 max-w-md mx-auto p-6 rounded-2xl mb-8 transition-colors duration-300">
 
-                <h3 class="font-bold mb-2">
+                <h3
+                    class="font-bold mb-2"
+                    data-i18n="Let's Collaborate!">
                     Let's Collaborate!
                 </h3>
 
-                <p class="text-xs text-slate-400 mb-4">
+                <p
+                    class="text-xs text-slate-400 mb-4"
+                    data-i18n="collaborate-description">
                     For job offers, projects, or feedback, feel free to drop me an email.
                 </p>
 
-                <a href="mailto:ardaarda0793@icloud.com" class="inline-block bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-slate-950 text-sm font-bold px-6 py-2.5 rounded-lg transition">
+                <a
+                    href="mailto:ardaarda0793@icloud.com"
+                    class="inline-block bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-slate-950 text-sm font-bold px-6 py-2.5 rounded-lg transition"
+                    data-i18n="Send an Email">
                     Send an Email
                 </a>
-
             </div>
 
             <div class="flex justify-center space-x-4">
 
-                <a href="https://www.linkedin.com/in/f-arda-ozturk-67831b41a/" target="_blank" rel="noopener noreferrer" aria-label="Visit Arda's LinkedIn Profile" class="text-sm font-medium text-orange-400 hover:text-orange-300 transition">
+                <a
+                    href="https://www.linkedin.com/in/f-arda-ozturk-67831b41a/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Arda's LinkedIn Profile"
+                    class="text-sm font-medium text-orange-400 hover:text-orange-300 transition"
+                    data-i18n="LinkedIn">
                     LinkedIn
                 </a>
 
                 <span class="text-slate-700">•</span>
 
-                <a href="https://github.com/ardaztt" target="_blank" rel="noopener noreferrer" aria-label="Visit Arda's GitHub Profile" class="text-sm font-medium text-amber-400 hover:text-amber-300 transition">
+                <a
+                    href="https://github.com/ardaztt"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit Arda's GitHub Profile"
+                    class="text-sm font-medium text-amber-400 hover:text-amber-300 transition"
+                    data-i18n="GitHub">
                     GitHub
                 </a>
-
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-darkBg py-8 text-center text-xs text-slate-500 border-t border-slate-900 transition-colors duration-300">
-        <p>© 2026 Arda Data. Built for Data Analysts.</p>
+    <footer
+        class="bg-darkBg py-8 text-center text-xs text-slate-500 border-t border-slate-900 transition-colors duration-300">
+
+        <p data-i18n="footer">
+            © 2026 Arda Data. Built for Data Analysts.
+        </p>
     </footer>
 
     <!-- Lightbox -->
@@ -656,700 +1296,1169 @@
         id="image-lightbox"
         tabindex="-1"
         class="fixed inset-0 z-[60] hidden bg-black/95 backdrop-blur-md flex items-center justify-center p-4"
-        onclick="closeImageLightbox()"
         role="dialog"
         aria-modal="true"
         aria-label="Full screen image preview">
 
         <button
             type="button"
-            onclick="closeImageLightbox()"
+            id="lightbox-close"
             aria-label="Close full size view"
             class="absolute top-4 right-4 text-white bg-slate-800/80 hover:bg-orange-500 p-2.5 rounded-full border border-slate-700 transition z-50 cursor-pointer">
 
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true">
+
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"/>
             </svg>
         </button>
 
         <button
             type="button"
-            onclick="event.stopPropagation(); navigateLightbox(-1)"
+            id="lightbox-prev"
             aria-label="Previous image"
             class="absolute left-4 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-3 rounded-full border border-slate-700 transition z-50 shadow-2xl cursor-pointer">
 
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/>
+            <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true">
+
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2.5"
+                    d="M15 19l-7-7 7-7"/>
             </svg>
         </button>
 
         <button
             type="button"
-            onclick="event.stopPropagation(); navigateLightbox(1)"
+            id="lightbox-next"
             aria-label="Next image"
             class="absolute right-4 top-1/2 -translate-y-1/2 bg-slate-900/80 hover:bg-orange-500 text-white p-3 rounded-full border border-slate-700 transition z-50 shadow-2xl cursor-pointer">
 
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+            <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true">
+
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2.5"
+                    d="M9 5l7 7-7 7"/>
             </svg>
         </button>
 
         <img
             id="lightbox-img"
-            onclick="event.stopPropagation()"
             class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl border border-slate-800"
             src=""
             alt="Full screen image view">
     </div>
 
-<style>
-    .no-scrollbar::-webkit-scrollbar {
-        display: none;
-    }
+    <style>
+        /* =========================
+           UTILITY STYLES
+        ========================= */
 
-    .no-scrollbar {
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-    }
-
-    .read-more-check:checked ~ label .read-more-btn {
-        display: none;
-    }
-
-    .read-more-check:checked ~ label .show-less-btn {
-        display: inline;
-    }
-
-    /* Light Mode */
-    html.light body {
-        background-color: #f8fafc;
-        color: #0f172a;
-    }
-
-    html.light header {
-        background-color: rgba(248, 250, 252, 0.90);
-        border-color: #e2e8f0;
-    }
-
-    html.light .bg-darkBg {
-        background-color: #f8fafc !important;
-    }
-
-    html.light .bg-slate-900 {
-        background-color: #f1f5f9 !important;
-    }
-
-    html.light .bg-slate-900\/80 {
-        background-color: rgba(241, 245, 249, 0.90) !important;
-    }
-
-    html.light .bg-cardBg {
-        background-color: #ffffff !important;
-    }
-
-    html.light .bg-cardBg\/40 {
-        background-color: rgba(255, 255, 255, 0.75) !important;
-    }
-
-    html.light .bg-darkBg\/60 {
-        background-color: rgba(248, 250, 252, 0.80) !important;
-    }
-
-    html.light .bg-slate-800\/80 {
-        background-color: rgba(226, 232, 240, 0.85) !important;
-        color: #334155 !important;
-    }
-
-    html.light .bg-slate-950 {
-        background-color: #e2e8f0 !important;
-    }
-
-    html.light .text-slate-100 {
-        color: #0f172a !important;
-    }
-
-    html.light .text-slate-200 {
-        color: #1e293b !important;
-    }
-
-    html.light .text-slate-300 {
-        color: #334155 !important;
-    }
-
-    html.light .text-slate-400 {
-        color: #64748b !important;
-    }
-
-    html.light .text-slate-500 {
-        color: #64748b !important;
-    }
-
-    html.light .text-slate-700 {
-        color: #475569 !important;
-    }
-
-    html.light .border-slate-800,
-    html.light .border-slate-800\/80,
-    html.light .border-slate-800\/50,
-    html.light .border-slate-900 {
-        border-color: #e2e8f0 !important;
-    }
-
-    html.light .border-slate-700 {
-        border-color: #cbd5e1 !important;
-    }
-
-    html.light .hover\:text-white:hover {
-        color: #0f172a !important;
-    }
-
-    html.light .bg-slate-900\/80 .text-slate-400 {
-        color: #64748b !important;
-    }
-
-    html.light .bg-slate-900\/80 .hover\:text-white:hover {
-        color: #0f172a !important;
-    }
-
-    html.light #moon-icon {
-        display: none;
-    }
-
-    html.light #sun-icon {
-        display: block;
-    }
-
-    html.light #theme-toggle {
-        background-color: rgba(241, 245, 249, 0.90);
-        border-color: #cbd5e1;
-        color: #475569;
-    }
-
-    @media (max-width: 900px) {
-        header nav {
-            gap: 0.75rem;
+        html {
+            scroll-behavior: smooth;
         }
 
-        header nav > a {
+        .no-scrollbar::-webkit-scrollbar {
             display: none;
         }
 
-        header nav > a:last-of-type {
-            display: block;
-        }
-    }
-
-    @media (max-width: 640px) {
-        header .max-w-5xl {
-            padding-top: 0.75rem;
-            padding-bottom: 0.75rem;
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
 
-        header nav > a:last-of-type {
-            display: none;
+        /* =========================
+           LIGHT MODE
+        ========================= */
+
+        html.light body {
+            background-color: #f8fafc;
+            color: #0f172a;
         }
 
-        .text-4xl {
-            font-size: 2.25rem;
+        html.light header {
+            background-color: rgba(248, 250, 252, 0.90);
+            border-color: #e2e8f0;
         }
-    }
 
-    @media (prefers-reduced-motion: reduce) {
-        *,
-        *::before,
-        *::after {
-            scroll-behavior: auto !important;
-            transition-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
+        html.light .bg-darkBg {
+            background-color: #f8fafc !important;
         }
-    }
-</style>
 
-<script>
-    let currentLightboxImages = [];
-    let currentLightboxIndex = 0;
+        html.light .bg-slate-900 {
+            background-color: #f1f5f9 !important;
+        }
 
-    /* =========================
-       THEME SUPPORT
-    ========================= */
+        html.light .bg-slate-900\/80 {
+            background-color: rgba(241, 245, 249, 0.90) !important;
+        }
 
-    function applyTheme(theme) {
-        const html = document.documentElement;
-        const themeToggle = document.getElementById('theme-toggle');
+        html.light .bg-cardBg {
+            background-color: #ffffff !important;
+        }
 
-        if (theme === 'light') {
-            html.classList.remove('dark');
-            html.classList.add('light');
+        html.light .bg-cardBg\/40 {
+            background-color: rgba(255, 255, 255, 0.75) !important;
+        }
+
+        html.light .bg-darkBg\/60 {
+            background-color: rgba(248, 250, 252, 0.80) !important;
+        }
+
+        html.light .bg-slate-800\/80 {
+            background-color: rgba(226, 232, 240, 0.85) !important;
+            color: #334155 !important;
+        }
+
+        html.light .bg-slate-950 {
+            background-color: #e2e8f0 !important;
+        }
+
+        html.light .text-slate-100 {
+            color: #0f172a !important;
+        }
+
+        html.light .text-slate-200 {
+            color: #1e293b !important;
+        }
+
+        html.light .text-slate-300 {
+            color: #334155 !important;
+        }
+
+        html.light .text-slate-400 {
+            color: #64748b !important;
+        }
+
+        html.light .text-slate-500 {
+            color: #64748b !important;
+        }
+
+        html.light .text-slate-700 {
+            color: #475569 !important;
+        }
+
+        html.light .border-slate-800,
+        html.light .border-slate-800\/80,
+        html.light .border-slate-800\/50,
+        html.light .border-slate-900 {
+            border-color: #e2e8f0 !important;
+        }
+
+        html.light .border-slate-700 {
+            border-color: #cbd5e1 !important;
+        }
+
+        html.light .hover\:text-white:hover {
+            color: #0f172a !important;
+        }
+
+        html.light .bg-slate-900\/80 .text-slate-400 {
+            color: #64748b !important;
+        }
+
+        html.light .bg-slate-900\/80 .hover\:text-white:hover {
+            color: #0f172a !important;
+        }
+
+        /* =========================
+           RESPONSIVE NAVIGATION
+        ========================= */
+
+        @media (max-width: 900px) {
+            header nav {
+                gap: 0.75rem;
+            }
+
+            header nav > a {
+                display: none;
+            }
+
+            header nav > a:last-of-type {
+                display: block;
+            }
+        }
+
+        @media (max-width: 640px) {
+            header .max-w-5xl {
+                padding-top: 0.75rem;
+                padding-bottom: 0.75rem;
+            }
+
+            header nav > a:last-of-type {
+                display: none;
+            }
+
+            .text-4xl {
+                font-size: 2.25rem;
+            }
+        }
+
+        /* =========================
+           REDUCED MOTION
+        ========================= */
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
+        }
+    </style>
+
+    <script>
+        'use strict';
+
+        /* =========================
+           GLOBAL STATE
+        ========================= */
+
+        let currentLightboxImages = [];
+        let currentLightboxIndex = 0;
+        let currentLanguage = 'en';
+
+        /* =========================
+           TRANSLATIONS
+        ========================= */
+
+        const translations = {
+            en: {
+                'Projects': 'Projects',
+                'Skills': 'Skills',
+                'About & Contact': 'About & Contact',
+                'YouTube Channel →': 'YouTube Channel →',
+                'Data Analysis Projects': 'Data Analysis Projects',
+                '& Case Studies': '& Case Studies',
+                'hero-description':
+                    'I design and execute end-to-end data analysis projects. Explore real-world datasets, reproducible code pipelines, and technical walkthroughs built to solve complex business problems.',
+                'Browse Projects': 'Browse Projects',
+                'Download CV': 'Download CV',
+                'Rows Analyzed': 'Rows Analyzed',
+                'Portfolio': 'Portfolio',
+                'Case Studies': 'Case Studies',
+                'Open Source': 'Open Source',
+                'Skills & Tools': 'Skills & Tools',
+                'Project Hub': 'Project Hub',
+                'YouTube Videos': 'YouTube Videos',
+                'Excel': 'Excel',
+                'SQL': 'SQL',
+                'PowerBI': 'PowerBI',
+                'Python': 'Python',
+                'End-to-End Projects Are on the Way':
+                    'End-to-End Projects Are on the Way',
+                'youtube-description':
+                    'I am currently engineering comprehensive, real-world data analytics case studies featuring end-to-end pipelines (Python ETL, MSSQL relational modeling, and PowerBI interactive reporting). Stay tuned!',
+                'Coming Soon': 'Coming Soon',
+                'Excel Analysis': 'Excel Analysis',
+                'Advanced Functions & Pivots':
+                    'Advanced Functions & Pivots',
+                'Retail Sales & Pivot Analysis':
+                    'Retail Sales & Pivot Analysis',
+                'excel-description-1':
+                    'A comprehensive sales performance analysis workflow built in Excel. Utilized advanced aggregation functions (SUMIFS, COUNTIFS) for conditional KPI tracking, dynamic lookups (XLOOKUP) for data enrichment, and structured Pivot Table & Pivot Chart reports to uncover regional retail trends and margin drivers.',
+                'Advanced Formulas & Logic':
+                    'Advanced Formulas & Logic',
+                'Sales Metrics': 'Sales Metrics',
+                'excel-description-2':
+                    'Designed an automated sales metric framework using nested logical functions and multi-criteria lookup workflows. Implemented AVERAGEIFS for segment benchmarks, MAX/MIN for outlier detection, and dynamic array formulas (UNIQUE, FILTER) for automated categorical data extraction.',
+                'SQL Analysis': 'SQL Analysis',
+                'JOINs, GROUP BY & Subqueries':
+                    'JOINs, GROUP BY & Subqueries',
+                'Northwind SQL Analysis':
+                    'Northwind SQL Analysis',
+                'sql-description':
+                    'A SQL analysis project using the Northwind database to practice relational data analysis and aggregation techniques. The analysis covered multi-table INNER JOINs, GROUP BY and HAVING for country-level sales and customer analysis, as well as subqueries to identify orders with above-average freight values. The project focused on extracting meaningful business insights from related customer, order, and order detail tables.',
+                'Power BI Dashboard': 'Power BI Dashboard',
+                'Interactive BI Dashboard':
+                    'Interactive BI Dashboard',
+                'powerbi-description':
+                    'Designed and deployed an interactive business intelligence dashboard in Power BI. Structured the relational data model using clean source tables and built cross-filtered visual analytics to track key performance indicators. You can check out the interactive video walkthrough by clicking the second slide to watch it on YouTube.',
+                'Python Data Analysis':
+                    'Python Data Analysis',
+                'Pandas & NumPy': 'Pandas & NumPy',
+                'DataCo Supply Chain Analysis':
+                    'DataCo Supply Chain Analysis',
+                'python-description':
+                    'A data cleaning and exploratory analysis project based on a supply chain dataset containing 180,519 rows and 53 columns. The workflow covered dataset inspection, missing-value handling, data-type validation, and data preparation before analysis. Key business metrics were then calculated across sales, delivery performance, markets, and product categories. The analysis generated $36.78M in total sales, a $203.77 average sales value, and a 54.70% late delivery rate, with Europe identified as the top-performing market and Fishing as the leading product category.',
+                '...Read more': '...Read more',
+                '...Show less': '...Show less',
+                'Raw Data & KPIs': 'Raw Data & KPIs',
+                'Pivot Dashboard': 'Pivot Dashboard',
+                'Advanced Formulas': 'Advanced Formulas',
+                'Metrics & Summary': 'Metrics & Summary',
+                'Formula Breakdown': 'Formula Breakdown',
+                'Country Sales Analysis': 'Country Sales Analysis',
+                'Customer Order Analysis': 'Customer Order Analysis',
+                'Freight Subquery Analysis':
+                    'Freight Subquery Analysis',
+                'Dashboard Preview': 'Dashboard Preview',
+                'Video Walkthrough': 'Video Walkthrough',
+                'Data Cleaning & Preparation':
+                    'Data Cleaning & Preparation',
+                'Sales & Delivery Analysis':
+                    'Sales & Delivery Analysis',
+                'image-help':
+                    '💡 Click on images to view full size in high resolution.',
+                'powerbi-help':
+                    '💡 Click arrows to switch between dashboard preview and video guide.',
+                'About Me': 'About Me',
+                'about-description':
+                    'Hi, I\'m Arda. I design and build end-to-end data analysis workflows using Excel, SQL, Python, and PowerBI. This portfolio hub showcases my practical projects and technical case studies built to solve real-world business problems.\n\nOpen to entry-level data analyst positions, internships, and project collaborations.',
+                'Let\'s Collaborate!': 'Let\'s Collaborate!',
+                'collaborate-description':
+                    'For job offers, projects, or feedback, feel free to drop me an email.',
+                'Send an Email': 'Send an Email',
+                'LinkedIn': 'LinkedIn',
+                'GitHub': 'GitHub',
+                'footer': '© 2026 Arda Data. Built for Data Analysts.'
+            },
+
+            tr: {
+                'Projects': 'Projeler',
+                'Skills': 'Yetenekler',
+                'About & Contact': 'Hakkımda & İletişim',
+                'YouTube Channel →': 'YouTube Kanalı →',
+                'Data Analysis Projects': 'Veri Analizi Projeleri',
+                '& Case Studies': '& Vaka Çalışmaları',
+                'hero-description':
+                    'Uçtan uca veri analizi projeleri tasarlıyor ve geliştiriyorum. Gerçek dünya veri setlerini, yeniden üretilebilir kod süreçlerini ve karmaşık iş problemlerini çözmek için oluşturulmuş teknik uygulamaları keşfedin.',
+                'Browse Projects': 'Projelere Göz At',
+                'Download CV': 'CV\'yi İndir',
+                'Rows Analyzed': 'Analiz Edilen Satırlar',
+                'Portfolio': 'Portföy',
+                'Case Studies': 'Çalışmalar',
+                'Open Source': 'Açık Kaynak',
+                'Skills & Tools': 'Yetenekler & Araçlar',
+                'Project Hub': 'Proje Merkezi',
+                'YouTube Videos': 'YouTube Videoları',
+                'Excel': 'Excel',
+                'SQL': 'SQL',
+                'PowerBI': 'PowerBI',
+                'Python': 'Python',
+                'End-to-End Projects Are on the Way':
+                    'Uçtan Uca Projeler Yolda',
+                'youtube-description':
+                    'Gerçek dünya veri analitiği vaka çalışmalarını uçtan uca süreçlerle (Python ETL, MSSQL ilişkisel veri modelleme ve PowerBI etkileşimli raporlama) geliştiriyorum. Takipte kalın.',
+                'Coming Soon': 'Çok Yakında',
+                'Excel Analysis': 'Excel Analizi',
+                'Advanced Functions & Pivots':
+                    'Gelişmiş Fonksiyonlar & Pivot Tablolar',
+                'Retail Sales & Pivot Analysis':
+                    'Perakende Satış & Pivot Analizi',
+                'excel-description-1':
+                    'Excel kullanılarak oluşturulmuş kapsamlı bir satış performansı analiz iş akışı. Koşullu KPI takibi için gelişmiş toplama fonksiyonları (SUMIFS, COUNTIFS), veri zenginleştirme için dinamik aramalar (XLOOKUP) ve bölgesel perakende trendleri ile kârlılık etkenlerini ortaya çıkarmak için yapılandırılmış Pivot Table ve Pivot Chart raporları kullanıldı.',
+                'Advanced Formulas & Logic':
+                    'Gelişmiş Formüller & Mantık',
+                'Sales Metrics': 'Satış Metrikleri',
+                'excel-description-2':
+                    'İç içe mantıksal fonksiyonlar ve çok kriterli arama iş akışları kullanılarak otomatik bir satış metrikleri yapısı tasarlandı. Segment karşılaştırmaları için AVERAGEIFS, aykırı değer tespiti için MAX/MIN ve kategorik verilerin otomatik olarak çıkarılması için dinamik dizi formülleri (UNIQUE, FILTER) uygulandı.',
+                'SQL Analysis': 'SQL Analizi',
+                'JOINs, GROUP BY & Subqueries':
+                    'JOIN\'ler, GROUP BY & Alt Sorgular',
+                'Northwind SQL Analysis':
+                    'Northwind SQL Analizi',
+                'sql-description':
+                    'Northwind veritabanı kullanılarak ilişkisel veri analizi ve toplulaştırma tekniklerini uygulamak için hazırlanmış bir SQL analiz projesi. Analizde ülke bazında satış ve müşteri analizi için çoklu INNER JOIN, GROUP BY ve HAVING; ortalamanın üzerindeki navlun değerine sahip siparişleri belirlemek için ise alt sorgular kullanıldı. Proje, ilişkili müşteri, sipariş ve sipariş detayı tablolarından anlamlı iş içgörüleri elde etmeye odaklandı.',
+                'Power BI Dashboard': 'Power BI Dashboard',
+                'Interactive BI Dashboard':
+                    'Etkileşimli BI Dashboard',
+                'powerbi-description':
+                    'Power BI ile etkileşimli bir iş zekâsı dashboard\'u tasarlandı ve geliştirildi. Temiz kaynak tablolar kullanılarak ilişkisel veri modeli yapılandırıldı ve temel performans göstergelerini takip etmek için çapraz filtrelemeli görsel analizler oluşturuldu. YouTube\'da interaktif video anlatımını izlemek için ikinci slayta tıklayabilirsiniz.',
+                'Python Data Analysis':
+                    'Python Veri Analizi',
+                'Pandas & NumPy': 'Pandas & NumPy',
+                'DataCo Supply Chain Analysis':
+                    'DataCo Tedarik Zinciri Analizi',
+                'python-description':
+                    '180.519 satır ve 53 sütundan oluşan bir tedarik zinciri veri seti üzerinde gerçekleştirilen veri temizleme ve keşifsel analiz projesi. İş akışında veri setinin incelenmesi, eksik değerlerin ele alınması, veri tiplerinin doğrulanması ve analiz öncesi veri hazırlığı gerçekleştirildi. Ardından satışlar, teslimat performansı, pazarlar ve ürün kategorileri üzerinden temel iş metrikleri hesaplandı. Analiz sonucunda toplam satış $36.78M, ortalama satış değeri $203.77 ve geç teslimat oranı %54.70 olarak hesaplandı; Avrupa en yüksek performanslı pazar, Fishing ise lider ürün kategorisi olarak belirlendi.',
+                '...Read more': '...Daha Fazla Oku',
+                '...Show less': 'Daha Az Göster ↑',
+                'Raw Data & KPIs': 'Ham Veri & KPI\'lar',
+                'Pivot Dashboard': 'Pivot Dashboard',
+                'Advanced Formulas': 'Gelişmiş Formüller',
+                'Metrics & Summary': 'Metrikler & Özet',
+                'Formula Breakdown': 'Formül Detayı',
+                'Country Sales Analysis': 'Ülke Satış Analizi',
+                'Customer Order Analysis':
+                    'Müşteri Sipariş Analizi',
+                'Freight Subquery Analysis':
+                    'Freight Alt Sorgu Analizi',
+                'Dashboard Preview': 'Dashboard Önizlemesi',
+                'Video Walkthrough': 'Video Anlatımı',
+                'Data Cleaning & Preparation':
+                    'Veri Temizleme & Hazırlama',
+                'Sales & Delivery Analysis':
+                    'Satış & Teslimat Analizi',
+                'image-help':
+                    '💡 Görselleri tam boyutta ve yüksek çözünürlükte görüntülemek için görsellerin üzerine tıklayın.',
+                'powerbi-help':
+                    '💡 Dashboard önizlemesi ve video rehberi arasında geçiş yapmak için oklara tıklayın.',
+                'About Me': 'Hakkımda',
+                'about-description':
+                    'Merhaba, ben Arda. Excel, SQL, Python ve PowerBI kullanarak uçtan uca veri analizi iş akışları tasarlıyor ve geliştiriyorum. Bu portföy merkezi, gerçek dünyadaki iş problemlerini çözmeye yönelik pratik projelerimi ve teknik vaka çalışmalarımı sergiliyor.\n\nGiriş seviyesi veri analisti pozisyonlarına, stajlara ve proje iş birliklerine açığım.',
+                'Let\'s Collaborate!': 'Birlikte Çalışalım!',
+                'collaborate-description':
+                    'İş teklifleri, projeler veya geri bildirim için bana e-posta gönderebilirsiniz.',
+                'Send an Email': 'E-posta Gönder',
+                'LinkedIn': 'LinkedIn',
+                'GitHub': 'GitHub',
+                'footer':
+                    '© 2026 Arda Data. Veri Analistleri için geliştirildi.'
+            }
+        };
+
+        const attributeTranslations = {
+            en: {
+                'Arda Data Home': 'Arda Data Home',
+                'Main Navigation': 'Main Navigation',
+                'Visit YouTube Channel': 'Visit YouTube Channel',
+                'Download Arda Ozturk\'s CV':
+                    'Download Arda Ozturk\'s CV',
+                'Key Statistics': 'Key Statistics',
+                'Project Categories': 'Project Categories',
+                'Language selector': 'Language selector',
+                'Previous slide': 'Previous slide',
+                'Next slide': 'Next slide',
+                'Visit Arda\'s LinkedIn Profile':
+                    'Visit Arda\'s LinkedIn Profile',
+                'Visit Arda\'s GitHub Profile':
+                    'Visit Arda\'s GitHub Profile',
+                'Full screen image preview':
+                    'Full screen image preview',
+                'Close full size view':
+                    'Close full size view',
+                'Previous image': 'Previous image',
+                'Next image': 'Next image',
+                'Full screen image view':
+                    'Full screen image view',
+                'Excel Sales Performance image gallery':
+                    'Excel Sales Performance image gallery',
+                'Excel Formulas Workflow image gallery':
+                    'Excel Formulas Workflow image gallery',
+                'Northwind SQL Analysis query gallery':
+                    'Northwind SQL Analysis query gallery',
+                'Power BI Dashboard interactive gallery':
+                    'Power BI Dashboard interactive gallery',
+                'Python Data Analysis code gallery':
+                    'Python Data Analysis code gallery',
+                'Excel Questions Sheet':
+                    'Excel Questions Sheet',
+                'Excel Pivot Analysis Sheet':
+                    'Excel Pivot Analysis Sheet',
+                'Excel Formulas Sheet':
+                    'Excel Formulas Sheet',
+                'Excel Formulas Breakdown Sheet':
+                    'Excel Formulas Breakdown Sheet',
+                'Northwind SQL country sales and customer analysis query':
+                    'Northwind SQL country sales and customer analysis query',
+                'Northwind SQL customer order count and total sales query':
+                    'Northwind SQL customer order count and total sales query',
+                'Northwind SQL above-average freight subquery':
+                    'Northwind SQL above-average freight subquery',
+                'Power BI Dashboard Overview':
+                    'Power BI Dashboard Overview',
+                'Video Walkthrough Preview':
+                    'Video Walkthrough Preview',
+                'Python DataCo Supply Chain data cleaning and preparation code':
+                    'Python DataCo Supply Chain data cleaning and preparation code',
+                'Python DataCo Supply Chain sales and delivery analysis code':
+                    'Python DataCo Supply Chain sales and delivery analysis code',
+                'Switch to light mode':
+                    'Switch to light mode',
+                'Switch to dark mode':
+                    'Switch to dark mode',
+                'Watch Power BI video walkthrough':
+                    'Watch Power BI video walkthrough'
+            },
+
+            tr: {
+                'Arda Data Home': 'Arda Data Ana Sayfa',
+                'Main Navigation': 'Ana Navigasyon',
+                'Visit YouTube Channel':
+                    'YouTube Kanalını Ziyaret Et',
+                'Download Arda Ozturk\'s CV':
+                    'Arda Öztürk\'ün CV\'sini İndir',
+                'Key Statistics': 'Temel İstatistikler',
+                'Project Categories': 'Proje Kategorileri',
+                'Language selector': 'Dil seçici',
+                'Previous slide': 'Önceki slayt',
+                'Next slide': 'Sonraki slayt',
+                'Visit Arda\'s LinkedIn Profile':
+                    'Arda\'nın LinkedIn Profilini Ziyaret Et',
+                'Visit Arda\'s GitHub Profile':
+                    'Arda\'nın GitHub Profilini Ziyaret Et',
+                'Full screen image preview':
+                    'Tam ekran görsel önizlemesi',
+                'Close full size view':
+                    'Tam boyutlu görünümü kapat',
+                'Previous image': 'Önceki görsel',
+                'Next image': 'Sonraki görsel',
+                'Full screen image view':
+                    'Tam ekran görsel görünümü',
+                'Excel Sales Performance image gallery':
+                    'Excel Satış Performansı görsel galerisi',
+                'Excel Formulas Workflow image gallery':
+                    'Excel Formül İş Akışı görsel galerisi',
+                'Northwind SQL Analysis query gallery':
+                    'Northwind SQL Analizi sorgu galerisi',
+                'Power BI Dashboard interactive gallery':
+                    'Power BI Dashboard etkileşimli galerisi',
+                'Python Data Analysis code gallery':
+                    'Python Veri Analizi kod galerisi',
+                'Excel Questions Sheet':
+                    'Excel Sorular Sayfası',
+                'Excel Pivot Analysis Sheet':
+                    'Excel Pivot Analizi Sayfası',
+                'Excel Formulas Sheet':
+                    'Excel Formülleri Sayfası',
+                'Excel Formulas Breakdown Sheet':
+                    'Excel Formül Detayı Sayfası',
+                'Northwind SQL country sales and customer analysis query':
+                    'Northwind SQL ülke satış ve müşteri analizi sorgusu',
+                'Northwind SQL customer order count and total sales query':
+                    'Northwind SQL müşteri sipariş sayısı ve toplam satış sorgusu',
+                'Northwind SQL above-average freight subquery':
+                    'Northwind SQL ortalamanın üzerindeki freight alt sorgusu',
+                'Power BI Dashboard Overview':
+                    'Power BI Dashboard Genel Görünümü',
+                'Video Walkthrough Preview':
+                    'Video Anlatımı Önizlemesi',
+                'Python DataCo Supply Chain data cleaning and preparation code':
+                    'Python DataCo Supply Chain veri temizleme ve hazırlama kodu',
+                'Python DataCo Supply Chain sales and delivery analysis code':
+                    'Python DataCo Supply Chain satış ve teslimat analizi kodu',
+                'Switch to light mode':
+                    'Açık moda geç',
+                'Switch to dark mode':
+                    'Koyu moda geç',
+                'Watch Power BI video walkthrough':
+                    'Power BI video anlatımını izle'
+            }
+        };
+
+        /* =========================
+           THEME
+        ========================= */
+
+        function applyTheme(theme) {
+            const html = document.documentElement;
+            const themeToggle = document.getElementById('theme-toggle');
+            const sunIcon = document.getElementById('sun-icon');
+            const moonIcon = document.getElementById('moon-icon');
+
+            const normalizedTheme =
+                theme === 'light' ? 'light' : 'dark';
+
+            const isLight = normalizedTheme === 'light';
+
+            html.classList.toggle('light', isLight);
+            html.classList.toggle('dark', !isLight);
+
+            if (sunIcon && moonIcon) {
+                sunIcon.classList.toggle('hidden', !isLight);
+                moonIcon.classList.toggle('hidden', isLight);
+            }
 
             if (themeToggle) {
-                themeToggle.setAttribute('aria-label', 'Switch to dark mode');
-                themeToggle.setAttribute('title', 'Switch to dark mode');
-            }
-        } else {
-            html.classList.remove('light');
-            html.classList.add('dark');
+                const labelKey = isLight
+                    ? 'Switch to dark mode'
+                    : 'Switch to light mode';
 
-            if (themeToggle) {
-                themeToggle.setAttribute('aria-label', 'Switch to light mode');
-                themeToggle.setAttribute('title', 'Switch to light mode');
+                themeToggle.setAttribute(
+                    'aria-label',
+                    attributeTranslations[currentLanguage][labelKey] || labelKey
+                );
+
+                themeToggle.setAttribute(
+                    'title',
+                    attributeTranslations[currentLanguage][labelKey] || labelKey
+                );
             }
+
+            localStorage.setItem('siteTheme', normalizedTheme);
         }
 
-        localStorage.setItem('siteTheme', theme);
-    }
+        function toggleTheme() {
+            const isLight =
+                document.documentElement.classList.contains('light');
 
-    function toggleTheme() {
-        const isLight = document.documentElement.classList.contains('light');
-        applyTheme(isLight ? 'dark' : 'light');
-    }
-
-    function initializeTheme() {
-        const savedTheme = localStorage.getItem('siteTheme');
-
-        if (savedTheme === 'light' || savedTheme === 'dark') {
-            applyTheme(savedTheme);
-            return;
+            applyTheme(isLight ? 'dark' : 'light');
         }
 
-        const prefersLight = window.matchMedia &&
-            window.matchMedia('(prefers-color-scheme: light)').matches;
+        function initializeTheme() {
+            const savedTheme = localStorage.getItem('siteTheme');
 
-        applyTheme(prefersLight ? 'light' : 'dark');
-    }
-
-    /* =========================
-       SCROLL PROGRESS
-    ========================= */
-
-    function updateScrollProgress() {
-        const progressBar = document.getElementById('scroll-progress');
-
-        if (!progressBar) return;
-
-        const scrollTop = window.scrollY;
-        const documentHeight =
-            document.documentElement.scrollHeight - window.innerHeight;
-
-        const progress = documentHeight > 0
-            ? (scrollTop / documentHeight) * 100
-            : 0;
-
-        progressBar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
-    }
-
-    /* =========================
-       LANGUAGE SUPPORT
-    ========================= */
-
-    const translations = {
-        "Projects": "Projeler",
-        "Skills": "Yetenekler",
-        "About & Contact": "Hakkımda & İletişim",
-        "YouTube Channel →": "YouTube Kanalı →",
-
-        "Data Analysis Projects": "Veri Analizi Projeleri",
-        "& Case Studies": "& Vaka Çalışmaları",
-        "I design and execute end-to-end data analysis projects. Explore real-world datasets, reproducible code pipelines, and technical walkthroughs built to solve complex business problems.": "Uçtan uca veri analizi projeleri tasarlıyor ve geliştiriyorum. Gerçek dünya veri setlerini, yeniden üretilebilir kod süreçlerini ve karmaşık iş problemlerini çözmek için oluşturulmuş teknik uygulamaları keşfedin.",
-        "Browse Projects": "Projelere Göz At",
-        "Download CV": "CV'yi İndir",
-
-        "Rows Analyzed": "Analiz Edilen Satırlar",
-        "Portfolio": "Portföy",
-        "Case Studies": "Çalışmalar",
-        "Open Source": "Açık Kaynak",
-
-        "Skills & Tools": "Yetenekler & Araçlar",
-        "Project Hub": "Proje Merkezi",
-        "YouTube Videos": "YouTube Videoları",
-
-        "End-to-End Projects Are on the Way": "Uçtan Uca Projeler Yolda",
-        "I am currently engineering comprehensive, real-world data analytics case studies featuring end-to-end pipelines (Python ETL, MSSQL relational modeling, and PowerBI interactive reporting). Stay tuned!": "Gerçek dünya veri analitiği vaka çalışmalarını uçtan uca süreçlerle (Python ETL, MSSQL ilişkisel veri modelleme ve PowerBI etkileşimli raporlama) geliştiriyorum. Takipte kalın.",
-        "Coming Soon": "Çok Yakında",
-
-        "Excel Analysis": "Excel Analizi",
-        "Advanced Functions & Pivots": "Gelişmiş Fonksiyonlar & Pivot Tablolar",
-        "Retail Sales & Pivot Analysis": "Perakende Satış & Pivot Analizi",
-        "A comprehensive sales performance analysis workflow built in Excel. Utilized advanced aggregation functions (SUMIFS, COUNTIFS) for conditional KPI tracking, dynamic lookups (XLOOKUP) for data enrichment, and structured Pivot Table & Pivot Chart reports to uncover regional retail trends and margin drivers.": "Excel kullanılarak oluşturulmuş kapsamlı bir satış performansı analiz iş akışı. Koşullu KPI takibi için gelişmiş toplama fonksiyonları (SUMIFS, COUNTIFS), veri zenginleştirme için dinamik aramalar (XLOOKUP) ve bölgesel perakende trendleri ile kârlılık etkenlerini ortaya çıkarmak için yapılandırılmış Pivot Table ve Pivot Chart raporları kullanıldı.",
-
-        "Advanced Formulas & Logic": "Gelişmiş Formüller & Mantık",
-        "Sales Metrics": "Satış Metrikleri",
-        "Designed an automated sales metric framework using nested logical functions and multi-criteria lookup workflows. Implemented AVERAGEIFS for segment benchmarks, MAX/MIN for outlier detection, and dynamic array formulas (UNIQUE, FILTER) for automated categorical data extraction.": "İç içe mantıksal fonksiyonlar ve çok kriterli arama iş akışları kullanılarak otomatik bir satış metrikleri yapısı tasarlandı. Segment karşılaştırmaları için AVERAGEIFS, aykırı değer tespiti için MAX/MIN ve kategorik verilerin otomatik olarak çıkarılması için dinamik dizi formülleri (UNIQUE, FILTER) uygulandı.",
-
-        "SQL Analysis": "SQL Analizi",
-        "JOINs, GROUP BY & Subqueries": "JOIN'ler, GROUP BY & Alt Sorgular",
-        "Northwind SQL Analysis": "Northwind SQL Analizi",
-        "A SQL analysis project using the Northwind database to practice relational data analysis and aggregation techniques. The analysis covered multi-table INNER JOINs, GROUP BY and HAVING for country-level sales and customer analysis, as well as subqueries to identify orders with above-average freight values. The project focused on extracting meaningful business insights from related customer, order, and order detail tables.": "Northwind veritabanı kullanılarak ilişkisel veri analizi ve toplulaştırma tekniklerini uygulamak için hazırlanmış bir SQL analiz projesi. Analizde ülke bazında satış ve müşteri analizi için çoklu INNER JOIN, GROUP BY ve HAVING; ortalamanın üzerindeki navlun değerine sahip siparişleri belirlemek için ise alt sorgular kullanıldı. Proje, ilişkili müşteri, sipariş ve sipariş detayı tablolarından anlamlı iş içgörüleri elde etmeye odaklandı.",
-
-        "Interactive BI Dashboard": "Etkileşimli BI Dashboard",
-        "Designed and deployed an interactive business intelligence dashboard in Power BI. Structured the relational data model using clean source tables and built cross-filtered visual analytics to track key performance indicators. You can check out the interactive video walkthrough by clicking the second slide to watch it on YouTube.": "Power BI ile etkileşimli bir iş zekâsı dashboard'u tasarlandı ve geliştirildi. Temiz kaynak tablolar kullanılarak ilişkisel veri modeli yapılandırıldı ve temel performans göstergelerini takip etmek için çapraz filtrelemeli görsel analizler oluşturuldu. YouTube'da interaktif video anlatımını izlemek için ikinci slayta tıklayabilirsiniz.",
-
-        "Python Data Analysis": "Python Veri Analizi",
-        "DataCo Supply Chain Analysis": "DataCo Tedarik Zinciri Analizi",
-        "A data cleaning and exploratory analysis project based on a supply chain dataset containing 180,519 rows and 53 columns. The workflow covered dataset inspection, missing-value handling, data-type validation, and data preparation before analysis. Key business metrics were then calculated across sales, delivery performance, markets, and product categories. The analysis generated $36.78M in total sales, a $203.77 average sales value, and a 54.70% late delivery rate, with Europe identified as the top-performing market and Fishing as the leading product category.": "180.519 satır ve 53 sütundan oluşan bir tedarik zinciri veri seti üzerinde gerçekleştirilen veri temizleme ve keşifsel analiz projesi. İş akışında veri setinin incelenmesi, eksik değerlerin ele alınması, veri tiplerinin doğrulanması ve analiz öncesi veri hazırlığı gerçekleştirildi. Ardından satışlar, teslimat performansı, pazarlar ve ürün kategorileri üzerinden temel iş metrikleri hesaplandı. Analiz sonucunda toplam satış $36.78M, ortalama satış değeri $203.77 ve geç teslimat oranı %54.70 olarak hesaplandı; Avrupa en yüksek performanslı pazar, Fishing ise lider ürün kategorisi olarak belirlendi.",
-
-        "...Read more": "...Daha Fazla Oku",
-        "Show less ↑": "Daha Az Göster ↑",
-
-        "💡 Click on images to view full size in high resolution.": "💡 Görselleri tam boyutta ve yüksek çözünürlükte görüntülemek için görsellerin üzerine tıklayın.",
-        "💡 Click arrows to switch between dashboard preview and video guide.": "💡 Dashboard önizlemesi ve video rehberi arasında geçiş yapmak için oklara tıklayın.",
-
-        "Raw Data & KPIs": "Ham Veri & KPI'lar",
-        "Advanced Formulas": "Gelişmiş Formüller",
-        "Metrics & Summary": "Metrikler & Özet",
-        "Formula Breakdown": "Formül Detayı",
-        "Country Sales Analysis": "Ülke Satış Analizi",
-        "Customer Order Analysis": "Müşteri Sipariş Analizi",
-        "Freight Subquery Analysis": "Freight Alt Sorgu Analizi",
-        "Dashboard Preview": "Dashboard Önizlemesi",
-        "Video Walkthrough": "Video Anlatımı",
-        "Data Cleaning & Preparation": "Veri Temizleme & Hazırlama",
-        "Sales & Delivery Analysis": "Satış & Teslimat Analizi",
-
-        "About Me": "Hakkımda",
-        "Hi, I'm Arda. I design and build end-to-end data analysis workflows using Excel, SQL, Python, and PowerBI. This portfolio hub showcases my practical projects and technical case studies built to solve real-world business problems.": "Merhaba, ben Arda. Excel, SQL, Python ve PowerBI kullanarak uçtan uca veri analizi iş akışları tasarlıyor ve geliştiriyorum. Bu portföy merkezi, gerçek dünyadaki iş problemlerini çözmeye yönelik pratik projelerimi ve teknik vaka çalışmalarımı sergiliyor.",
-        "Open to entry-level data analyst positions, internships, and project collaborations.": "Giriş seviyesi veri analisti pozisyonlarına, stajlara ve proje iş birliklerine açığım.",
-        "Let's Collaborate!": "Birlikte Çalışalım!",
-        "For job offers, projects, or feedback, feel free to drop me an email.": "İş teklifleri, projeler veya geri bildirim için bana e-posta gönderebilirsiniz.",
-        "Send an Email": "E-posta Gönder",
-        "© 2026 Arda Data. Built for Data Analysts.": "© 2026 Arda Data. Veri Analistleri için geliştirildi."
-    };
-
-    const attributeTranslations = {
-        "Arda Data Home": "Arda Data Ana Sayfa",
-        "Main Navigation": "Ana Navigasyon",
-        "Visit YouTube Channel": "YouTube Kanalını Ziyaret Et",
-        "Download Arda Ozturk's CV": "Arda Öztürk'ün CV'sini İndir",
-        "Key Statistics": "Temel İstatistikler",
-        "Project Categories": "Proje Kategorileri",
-        "Toggle description text": "Açıklama metnini aç/kapat",
-        "Excel Sales Performance image gallery": "Excel Satış Performansı görsel galerisi",
-        "Excel Formulas Workflow image gallery": "Excel Formül İş Akışı görsel galerisi",
-        "Northwind SQL Analysis query gallery": "Northwind SQL Analizi sorgu galerisi",
-        "Power BI Dashboard interactive gallery": "Power BI Dashboard etkileşimli galerisi",
-        "Python Data Analysis code gallery": "Python Veri Analizi kod galerisi",
-        "Previous slide": "Önceki slayt",
-        "Next slide": "Sonraki slayt",
-        "Visit Arda's LinkedIn Profile": "Arda'nın LinkedIn Profilini Ziyaret Et",
-        "Visit Arda's GitHub Profile": "Arda'nın GitHub Profilini Ziyaret Et",
-        "Full screen image preview": "Tam ekran görsel önizlemesi",
-        "Close full size view": "Tam boyutlu görünümü kapat",
-        "Previous image": "Önceki görsel",
-        "Next image": "Sonraki görsel",
-        "Full screen image view": "Tam ekran görsel görünümü",
-
-        "Excel Questions Sheet": "Excel Sorular Sayfası",
-        "Excel Pivot Analysis Sheet": "Excel Pivot Analizi Sayfası",
-        "Excel Formulas Sheet": "Excel Formülleri Sayfası",
-        "Excel Formulas Breakdown Sheet": "Excel Formül Detayı Sayfası",
-        "Northwind SQL country sales and customer analysis query": "Northwind SQL ülke satış ve müşteri analizi sorgusu",
-        "Northwind SQL customer order count and total sales query": "Northwind SQL müşteri sipariş sayısı ve toplam satış sorgusu",
-        "Northwind SQL above-average freight subquery": "Northwind SQL ortalamanın üzerindeki freight alt sorgusu",
-        "Power BI Dashboard Overview": "Power BI Dashboard Genel Görünümü",
-        "Video Walkthrough Preview": "Video Anlatımı Önizlemesi",
-        "Python DataCo Supply Chain data cleaning and preparation code": "Python DataCo Supply Chain veri temizleme ve hazırlama kodu",
-        "Python DataCo Supply Chain sales and delivery analysis code": "Python DataCo Supply Chain satış ve teslimat analizi kodu"
-    };
-
-    const originalTexts = new WeakMap();
-    const originalAttributes = new WeakMap();
-
-    function translateTextNodes(lang) {
-        const walker = document.createTreeWalker(
-            document.body,
-            NodeFilter.SHOW_TEXT
-        );
-
-        let node;
-
-        while (node = walker.nextNode()) {
-            if (!originalTexts.has(node)) {
-                originalTexts.set(node, node.nodeValue);
+            if (savedTheme === 'light' || savedTheme === 'dark') {
+                applyTheme(savedTheme);
+                return;
             }
 
-            const original = originalTexts.get(node);
-            const trimmed = original.trim();
+            const prefersLight =
+                window.matchMedia &&
+                window.matchMedia('(prefers-color-scheme: light)').matches;
 
-            if (!trimmed) continue;
-
-            if (lang === 'tr' && translations[trimmed]) {
-                node.nodeValue = original.replace(trimmed, translations[trimmed]);
-            } else if (lang === 'en') {
-                node.nodeValue = original;
-            }
+            applyTheme(prefersLight ? 'light' : 'dark');
         }
-    }
 
-    function translateAttributes(lang) {
-        document.querySelectorAll('[aria-label], img[alt]').forEach(element => {
+        /* =========================
+           SCROLL PROGRESS
+        ========================= */
 
-            ['aria-label', 'alt'].forEach(attribute => {
+        function updateScrollProgress() {
+            const progressBar =
+                document.getElementById('scroll-progress');
 
-                if (!element.hasAttribute(attribute)) return;
+            if (!progressBar) return;
 
-                if (!originalAttributes.has(element)) {
-                    originalAttributes.set(element, {});
+            const scrollTop = window.scrollY;
+
+            const documentHeight =
+                document.documentElement.scrollHeight -
+                window.innerHeight;
+
+            const progress =
+                documentHeight > 0
+                    ? (scrollTop / documentHeight) * 100
+                    : 0;
+
+            progressBar.style.width =
+                `${Math.min(100, Math.max(0, progress))}%`;
+        }
+
+        /* =========================
+           LANGUAGE
+        ========================= */
+
+        function translatePage(lang) {
+            const dictionary =
+                translations[lang] || translations.en;
+
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.dataset.i18n;
+
+                if (!(key in dictionary)) return;
+
+                if (element.tagName === 'P' && key.includes('description')) {
+                    element.innerHTML =
+                        dictionary[key].replace(/\n\n/g, '<br><br>');
+                } else {
+                    element.textContent = dictionary[key];
                 }
-
-                const stored = originalAttributes.get(element);
-
-                if (!stored[attribute]) {
-                    stored[attribute] = element.getAttribute(attribute);
-                }
-
-                const original = stored[attribute];
-
-                if (lang === 'tr' && attributeTranslations[original]) {
-                    element.setAttribute(attribute, attributeTranslations[original]);
-                } else if (lang === 'en') {
-                    element.setAttribute(attribute, original);
-                }
-
             });
-        });
-    }
 
-    function setLanguage(lang) {
-        if (lang !== 'en' && lang !== 'tr') {
-            lang = 'en';
+            document
+                .querySelectorAll('[data-i18n-attr]')
+                .forEach(element => {
+                    const attributes =
+                        element.dataset.i18nAttr
+                            .split(',')
+                            .map(attribute => attribute.trim());
+
+                    attributes.forEach(attribute => {
+                        const original =
+                            element.dataset[`original${attribute.charAt(0).toUpperCase()}${attribute.slice(1)}`];
+
+                        if (!original) return;
+
+                        const translated =
+                            attributeTranslations[lang]?.[original];
+
+                        if (translated) {
+                            element.setAttribute(
+                                attribute,
+                                translated
+                            );
+                        }
+                    });
+                });
         }
 
-        translateTextNodes(lang);
-        translateAttributes(lang);
-
-        document.documentElement.lang = lang === 'en' ? 'en-US' : 'tr';
-
-        const enButton = document.getElementById('lang-en');
-        const trButton = document.getElementById('lang-tr');
-
-        if (enButton && trButton) {
-
-            if (lang === 'en') {
-                enButton.className = 'px-2 py-1 rounded-md text-xs font-bold bg-orange-500 text-slate-950 transition';
-                trButton.className = 'px-2 py-1 rounded-md text-xs font-bold text-slate-400 hover:text-white transition';
-            } else {
-                trButton.className = 'px-2 py-1 rounded-md text-xs font-bold bg-orange-500 text-slate-950 transition';
-                enButton.className = 'px-2 py-1 rounded-md text-xs font-bold text-slate-400 hover:text-white transition';
+        function setLanguage(lang) {
+            if (!translations[lang]) {
+                lang = 'en';
             }
 
+            currentLanguage = lang;
+
+            translatePage(lang);
+
+            document.documentElement.lang =
+                lang === 'tr' ? 'tr' : 'en-US';
+
+            const enButton =
+                document.getElementById('lang-en');
+
+            const trButton =
+                document.getElementById('lang-tr');
+
+            if (enButton && trButton) {
+                const activeClasses = [
+                    'bg-orange-500',
+                    'text-slate-950'
+                ];
+
+                const inactiveClasses = [
+                    'text-slate-400',
+                    'hover:text-white'
+                ];
+
+                enButton.classList.remove(
+                    ...activeClasses,
+                    ...inactiveClasses
+                );
+
+                trButton.classList.remove(
+                    ...activeClasses,
+                    ...inactiveClasses
+                );
+
+                if (lang === 'en') {
+                    enButton.classList.add(...activeClasses);
+                    trButton.classList.add(...inactiveClasses);
+
+                    enButton.setAttribute('aria-pressed', 'true');
+                    trButton.setAttribute('aria-pressed', 'false');
+                } else {
+                    trButton.classList.add(...activeClasses);
+                    enButton.classList.add(...inactiveClasses);
+
+                    trButton.setAttribute('aria-pressed', 'true');
+                    enButton.setAttribute('aria-pressed', 'false');
+                }
+            }
+
+            document.title =
+                lang === 'tr'
+                    ? 'Arda Data | Veri Analizi Proje Merkezi'
+                    : 'Arda Data | Data Analysis Project Hub';
+
+            const description =
+                document.querySelector('meta[name="description"]');
+
+            const ogTitle =
+                document.querySelector('meta[property="og:title"]');
+
+            const ogDescription =
+                document.querySelector('meta[property="og:description"]');
+
+            if (description) {
+                description.content =
+                    lang === 'tr'
+                        ? 'Arda Data tarafından hazırlanmış uçtan uca veri analizi proje portföyü. Gerçek dünya SQL, Python, Excel ve PowerBI veri setleriyle çalışın.'
+                        : 'End-to-end data analysis projects portfolio by Arda Data. Practice with real-world SQL, Python, Excel, and PowerBI datasets.';
+            }
+
+            if (ogTitle) {
+                ogTitle.content =
+                    lang === 'tr'
+                        ? 'Arda Data | Veri Analizi Proje Merkezi'
+                        : 'Arda Data | Data Analysis Project Hub';
+            }
+
+            if (ogDescription) {
+                ogDescription.content =
+                    lang === 'tr'
+                        ? 'Uçtan uca veri analizi projelerini, adım adım video anlatımlarını ve gerçek dünya veri setlerini keşfedin.'
+                        : 'Explore end-to-end data analysis projects with step-by-step video tutorials and real-world datasets.';
+            }
+
+            updateThemeAccessibilityLabel();
+
+            localStorage.setItem('siteLanguage', lang);
         }
 
-        document.title = lang === 'en'
-            ? 'Arda Data | Data Analysis Project Hub'
-            : 'Arda Data | Veri Analizi Proje Merkezi';
+        function updateThemeAccessibilityLabel() {
+            const themeToggle =
+                document.getElementById('theme-toggle');
 
-        const description = document.querySelector('meta[name="description"]');
-        const ogTitle = document.querySelector('meta[property="og:title"]');
-        const ogDescription = document.querySelector('meta[property="og:description"]');
+            if (!themeToggle) return;
 
-        if (description) {
-            description.content = lang === 'en'
-                ? 'End-to-end data analysis projects portfolio by Arda Data. Practice with real-world SQL, Python, Excel, and PowerBI datasets.'
-                : 'Arda Data tarafından hazırlanmış uçtan uca veri analizi proje portföyü. Gerçek dünya SQL, Python, Excel ve PowerBI veri setleriyle çalışın.';
+            const isLight =
+                document.documentElement.classList.contains('light');
+
+            const key =
+                isLight
+                    ? 'Switch to dark mode'
+                    : 'Switch to light mode';
+
+            const translated =
+                attributeTranslations[currentLanguage]?.[key] || key;
+
+            themeToggle.setAttribute('aria-label', translated);
+            themeToggle.setAttribute('title', translated);
         }
 
-        if (ogTitle) {
-            ogTitle.content = lang === 'en'
-                ? 'Arda Data | Data Analysis Project Hub'
-                : 'Arda Data | Veri Analizi Proje Merkezi';
-        }
+        /* =========================
+           PROJECT CATEGORIES
+        ========================= */
 
-        if (ogDescription) {
-            ogDescription.content = lang === 'en'
-                ? 'Explore end-to-end data analysis projects with step-by-step video tutorials and real-world datasets.'
-                : 'Uçtan uca veri analizi projelerini, adım adım video anlatımlarını ve gerçek dünya veri setlerini keşfedin.';
-        }
+        function showCategory(category) {
+            const targetCategory =
+                document.getElementById(`cat-${category}`);
 
-        localStorage.setItem('siteLanguage', lang);
-    }
+            const targetButton =
+                document.getElementById(`btn-${category}`);
 
-    /* =========================
-       PROJECT CATEGORIES
-    ========================= */
+            if (!targetCategory || !targetButton) return;
 
-    function showCategory(category) {
-        document.querySelectorAll('.category-content').forEach(el => {
-            el.classList.add('hidden');
-        });
+            document
+                .querySelectorAll('.category-content')
+                .forEach(element => {
+                    element.classList.add('hidden');
+                    element.setAttribute('aria-hidden', 'true');
+                });
 
-        const activeClasses = [
-            'bg-gradient-to-r',
-            'from-orange-500',
-            'to-amber-500',
-            'text-slate-950'
-        ];
+            const activeClasses = [
+                'bg-gradient-to-r',
+                'from-orange-500',
+                'to-amber-500',
+                'text-slate-950'
+            ];
 
-        const inactiveClasses = [
-            'text-slate-400',
-            'hover:text-white'
-        ];
+            const inactiveClasses = [
+                'text-slate-400',
+                'hover:text-white'
+            ];
 
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.classList.remove(...activeClasses);
-            btn.classList.add(...inactiveClasses);
-            btn.setAttribute('aria-selected', 'false');
-        });
+            document
+                .querySelectorAll('.tab-btn')
+                .forEach(button => {
+                    button.classList.remove(...activeClasses);
+                    button.classList.add(...inactiveClasses);
+                    button.setAttribute('aria-selected', 'false');
+                });
 
-        const targetCategory = document.getElementById('cat-' + category);
-        const targetBtn = document.getElementById('btn-' + category);
-
-        if (targetCategory) {
             targetCategory.classList.remove('hidden');
+            targetCategory.setAttribute('aria-hidden', 'false');
+
+            targetButton.classList.remove(...inactiveClasses);
+            targetButton.classList.add(...activeClasses);
+            targetButton.setAttribute('aria-selected', 'true');
         }
 
-        if (targetBtn) {
-            targetBtn.classList.remove(...inactiveClasses);
-            targetBtn.classList.add(...activeClasses);
-            targetBtn.setAttribute('aria-selected', 'true');
-        }
-    }
+        /* =========================
+           CAROUSEL
+        ========================= */
 
-    /* =========================
-       CAROUSEL
-    ========================= */
+        function scrollCarousel(carouselId, direction) {
+            const container =
+                document.getElementById(carouselId);
 
-    function scrollCarousel(carouselId, direction) {
-        const container = document.getElementById(carouselId);
+            if (!container) return;
 
-        if (container) {
-            const scrollAmount = container.clientWidth;
+            const scrollAmount =
+                container.clientWidth;
 
             container.scrollBy({
                 left: direction * scrollAmount,
                 behavior: 'smooth'
             });
         }
-    }
 
-    /* =========================
-       LIGHTBOX
-    ========================= */
+        /* =========================
+           IMAGE ACCESSIBILITY
+        ========================= */
 
-    function openGalleryLightbox(carouselId, index) {
-        const carousel = document.getElementById(carouselId);
-
-        if (!carousel) return;
-
-        const groupImages = Array.from(
-            carousel.querySelectorAll('img[role="button"]')
-        );
-
-        if (groupImages.length === 0) return;
-
-        currentLightboxImages = groupImages.map(img => img.src);
-
-        if (index >= currentLightboxImages.length || index < 0) {
-            index = 0;
+        function handleImageKeydown(event, carouselId, index) {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                openGalleryLightbox(carouselId, index);
+            }
         }
 
-        currentLightboxIndex = index;
+        /* =========================
+           READ MORE
+        ========================= */
 
-        updateLightboxImage();
+        function initializeReadMore() {
+            document
+                .querySelectorAll('.read-more-btn')
+                .forEach(button => {
 
-        const lightbox = document.getElementById('image-lightbox');
+                    button.addEventListener('click', () => {
+                        const targetId =
+                            button.dataset.readMore;
 
-        if (lightbox) {
+                        const target =
+                            document.getElementById(targetId) ||
+                            document.querySelector(
+                                `[data-i18n="${targetId}"]`
+                            );
+
+                        if (!target) return;
+
+                        const expanded =
+                            button.getAttribute('aria-expanded') === 'true';
+
+                        target.classList.toggle(
+                            'line-clamp-3',
+                            expanded
+                        );
+
+                        button.setAttribute(
+                            'aria-expanded',
+                            String(!expanded)
+                        );
+
+                        const textElement =
+                            button.querySelector('[data-i18n]');
+
+                        if (textElement) {
+                            textElement.dataset.i18n =
+                                expanded
+                                    ? '...Read more'
+                                    : '...Show less';
+
+                            const key =
+                                textElement.dataset.i18n;
+
+                            textElement.textContent =
+                                translations[currentLanguage][key] || key;
+                        }
+                    });
+                });
+        }
+
+        /* =========================
+           LIGHTBOX
+        ========================= */
+
+        function openGalleryLightbox(carouselId, index) {
+            const carousel =
+                document.getElementById(carouselId);
+
+            if (!carousel) return;
+
+            const groupImages =
+                Array.from(
+                    carousel.querySelectorAll('img[role="button"]')
+                );
+
+            if (groupImages.length === 0) return;
+
+            currentLightboxImages =
+                groupImages.map(image => image.src);
+
+            currentLightboxIndex =
+                index >= 0 && index < currentLightboxImages.length
+                    ? index
+                    : 0;
+
+            updateLightboxImage();
+
+            const lightbox =
+                document.getElementById('image-lightbox');
+
+            if (!lightbox) return;
+
             lightbox.classList.remove('hidden');
             document.body.classList.add('overflow-hidden');
+
             lightbox.focus();
         }
-    }
 
-    function navigateLightbox(direction) {
-        if (currentLightboxImages.length === 0) return;
+        function navigateLightbox(direction) {
+            if (currentLightboxImages.length === 0) return;
 
-        currentLightboxIndex =
-            (currentLightboxIndex + direction + currentLightboxImages.length) %
-            currentLightboxImages.length;
+            currentLightboxIndex =
+                (
+                    currentLightboxIndex +
+                    direction +
+                    currentLightboxImages.length
+                ) %
+                currentLightboxImages.length;
 
-        updateLightboxImage();
-    }
-
-    function updateLightboxImage() {
-        const imgElement = document.getElementById('lightbox-img');
-
-        if (imgElement && currentLightboxImages.length > 0) {
-            imgElement.src = currentLightboxImages[currentLightboxIndex];
+            updateLightboxImage();
         }
-    }
 
-    function closeImageLightbox() {
-        const lightbox = document.getElementById('image-lightbox');
+        function updateLightboxImage() {
+            const image =
+                document.getElementById('lightbox-img');
 
-        if (lightbox) {
+            if (!image || currentLightboxImages.length === 0) {
+                return;
+            }
+
+            image.src =
+                currentLightboxImages[currentLightboxIndex];
+        }
+
+        function closeImageLightbox() {
+            const lightbox =
+                document.getElementById('image-lightbox');
+
+            if (!lightbox) return;
+
             lightbox.classList.add('hidden');
             document.body.classList.remove('overflow-hidden');
+
+            const image =
+                document.getElementById('lightbox-img');
+
+            if (image) {
+                image.removeAttribute('src');
+            }
+
+            currentLightboxImages = [];
+            currentLightboxIndex = 0;
         }
-    }
 
-    /* =========================
-       KEYBOARD SUPPORT
-    ========================= */
+        /* =========================
+           EVENT LISTENERS
+        ========================= */
 
-    document.addEventListener('keydown', function(e) {
-        const lightbox = document.getElementById('image-lightbox');
+        document.addEventListener('DOMContentLoaded', () => {
 
-        if (lightbox && !lightbox.classList.contains('hidden')) {
+            initializeTheme();
 
-            if (e.key === 'ArrowLeft') {
-                e.preventDefault();
+            const savedLanguage =
+                localStorage.getItem('siteLanguage') || 'en';
+
+            setLanguage(savedLanguage);
+
+            document
+                .querySelectorAll('.tab-btn')
+                .forEach(button => {
+                    button.addEventListener('click', () => {
+                        showCategory(button.dataset.category);
+                    });
+                });
+
+            document
+                .querySelectorAll('.nav-link, .scroll-link')
+                .forEach(link => {
+                    link.addEventListener('click', event => {
+                        const targetId =
+                            link.getAttribute('href');
+
+                        if (!targetId || !targetId.startsWith('#')) {
+                            return;
+                        }
+
+                        const target =
+                            document.querySelector(targetId);
+
+                        if (!target) return;
+
+                        event.preventDefault();
+
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    });
+                });
+
+            document
+                .getElementById('lang-en')
+                ?.addEventListener('click', () => {
+                    setLanguage('en');
+                });
+
+            document
+                .getElementById('lang-tr')
+                ?.addEventListener('click', () => {
+                    setLanguage('tr');
+                });
+
+            document
+                .getElementById('theme-toggle')
+                ?.addEventListener('click', toggleTheme);
+
+            document
+                .getElementById('lightbox-close')
+                ?.addEventListener('click', closeImageLightbox);
+
+            document
+                .getElementById('lightbox-prev')
+                ?.addEventListener('click', () => {
+                    navigateLightbox(-1);
+                });
+
+            document
+                .getElementById('lightbox-next')
+                ?.addEventListener('click', () => {
+                    navigateLightbox(1);
+                });
+
+            document
+                .getElementById('image-lightbox')
+                ?.addEventListener('click', event => {
+                    if (event.target.id === 'image-lightbox') {
+                        closeImageLightbox();
+                    }
+                });
+
+            initializeReadMore();
+
+            showCategory('youtube');
+            updateScrollProgress();
+        });
+
+        document.addEventListener('keydown', event => {
+
+            const lightbox =
+                document.getElementById('image-lightbox');
+
+            if (!lightbox ||
+                lightbox.classList.contains('hidden')) {
+                return;
+            }
+
+            if (event.key === 'ArrowLeft') {
+                event.preventDefault();
                 navigateLightbox(-1);
             }
 
-            if (e.key === 'ArrowRight') {
-                e.preventDefault();
+            if (event.key === 'ArrowRight') {
+                event.preventDefault();
                 navigateLightbox(1);
             }
 
-            if (e.key === 'Escape') {
-                e.preventDefault();
+            if (event.key === 'Escape') {
+                event.preventDefault();
                 closeImageLightbox();
             }
-        }
-    });
-
-    /* =========================
-       SMOOTH SECTION SCROLL
-    ========================= */
-
-    function scrollToSection(sectionId, wheelClicks) {
-        const element = document.getElementById(sectionId);
-
-        if (!element) return;
-
-        const elementPosition =
-            element.getBoundingClientRect().top + window.pageYOffset;
-
-        const navHeight = 80;
-        const pixelOffset = wheelClicks * 100;
-
-        window.scrollTo({
-            top: elementPosition - navHeight - pixelOffset,
-            behavior: 'smooth'
         });
-    }
 
-    /* =========================
-       INITIALIZATION
-    ========================= */
+        window.addEventListener(
+            'scroll',
+            updateScrollProgress,
+            { passive: true }
+        );
 
-    document.addEventListener('DOMContentLoaded', function() {
-        initializeTheme();
-
-        const savedLanguage =
-            localStorage.getItem('siteLanguage') || 'en';
-
-        setLanguage(savedLanguage);
-        showCategory('youtube');
-
-        updateScrollProgress();
-    });
-
-    window.addEventListener('scroll', updateScrollProgress, {
-        passive: true
-    });
-
-    window.addEventListener('resize', updateScrollProgress);
-</script>
-
+        window.addEventListener(
+            'resize',
+            updateScrollProgress
+        );
+    </script>
 </body>
 </html>
